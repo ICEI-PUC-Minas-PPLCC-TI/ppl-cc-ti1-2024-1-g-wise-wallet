@@ -1,10 +1,9 @@
-# Nome do projeto
+# Wise Wallet
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
-
+O objetivo do site é fornecer um controle de finanças através de gráficos, assim como proporcionar possíveis métodos de divisão de dinheiro de forma que o usuário escolha entre as opções que mais lhe agradam, assim como o acompanhamento do cartão de crédito, se o usuário desejar.
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
+* Mateus de Carvalho Rodrigues
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
