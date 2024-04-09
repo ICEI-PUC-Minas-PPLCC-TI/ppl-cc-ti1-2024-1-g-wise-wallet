@@ -5,8 +5,9 @@ O objetivo do site é fornecer um controle de finanças através de gráficos, a
 
 * Mateus de Carvalho Rodrigues
 * Julio Cesar Thurow Buzzi
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Gabriel Mayer Clary
+* Samuel Lage Spalla Fajardo
+* Nome completo do aluno 5
 
 ## Professores responsáveis
 
