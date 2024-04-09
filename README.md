@@ -4,7 +4,7 @@ O objetivo do site é fornecer um controle de finanças através de gráficos, a
 ## Alunos integrantes da equipe
 
 * Mateus de Carvalho Rodrigues
-* Nome completo do aluno 2
+* Julio Cesar Thurow Buzzi
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
