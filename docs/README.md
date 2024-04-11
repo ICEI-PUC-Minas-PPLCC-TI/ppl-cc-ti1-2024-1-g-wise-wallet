@@ -18,11 +18,9 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 
 Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
-## Problema
+## Problemas
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Os problemas em que estamos tratando são a falta de controle financeiro,dívidas e onde envestir de forma segura,educação financeira e melhor controle de gastos.
 
 **Links Úteis**:
 
@@ -32,7 +30,8 @@ Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Think
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Iremos desenvolver um site cujo sua função e proporcinar para o usuário um controle financeiro atraves de gráficos, assim como um acompanhamento do cartão de credito por meio de gráficos e por fim sugestões personalizadas de como resolver o problema financeiro do usuário de acordo com as opções pré-definidas(Dívidas,investimentp,controle,economia,etc).
+As opções aida estão em análize.
 
 **Links Úteis**:
 
@@ -40,9 +39,7 @@ Aqui você deve descrever os objetivos do trabalho indicando que o objetivo gera
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Após entrevistas que realizamos com pessoas com problemas financeiros identificamos que os pricipais culpados disso são as dívidas,tanto as normais quanto a do cartão de crédito,assim como a falta de educação financeira cujo o nosso obejtivo e tornar isso mais fácil atraves de gráficos de gastos e ganhos.
 
 **Links Úteis**:
 
