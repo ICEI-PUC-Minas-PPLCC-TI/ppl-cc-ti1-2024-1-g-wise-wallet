@@ -74,7 +74,7 @@ Relações hierárquicas: Pode ocupar cargos de gestão em empresas ou ser um in
 
 ## Personas
 
-Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
+No link a seguir estão os relatórios que tiramos das personas entrevistadas e seus insights: https://docs.google.com/document/d/1lLSNtirKj2CsN-mY4Bwup8HW60uPGrrY/edit?usp=drive_link&ouid=108319171022462178135&rtpof=true&sd=true
 
 **Links Úteis**:
 
