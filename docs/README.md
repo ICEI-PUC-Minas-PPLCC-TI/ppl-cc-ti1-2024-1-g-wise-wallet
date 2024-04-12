@@ -85,7 +85,8 @@ Relacione as personas identificadas no seu projeto e os respectivos mapas de emp
 
 ## Histórias de Usuários
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+Foram feitas entrevistas com personas selecionadas para simular o público-alvo de nosso produto final, afim de auxiliar o desenvolvimento do software de maneira mais eficaz. No link a seguir estão os relatórios das entrevistas feitas com as personas Ana Alice e Ana Clara: 
+https://docs.google.com/document/d/18R2qJHXERF4PlkZcND1lxs60bOt1Pcx3/edit?usp=drive_link&ouid=108319171022462178135&rtpof=true&sd=true
 
 **Links Úteis**:
 
