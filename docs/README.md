@@ -47,9 +47,25 @@ Após entrevistas que realizamos com pessoas com problemas financeiros identific
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+Uma descrição dos nossos possíveis usuários:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
+Usuário Inexperiente em Finanças e Tecnologia:
+
+Conhecimentos prévios: Pouca ou nenhuma experiência em questões financeiras, precisa de orientação básica.
+Relação com a tecnologia: Pode ter dificuldades em usar aplicativos e ferramentas online, necessita de uma interface intuitiva e fácil de usar.
+Relações hierárquicas: Pode não ter uma posição hierárquica relevante, como um estudante ou alguém em início de carreira.
+
+Usuário Intermediário em Finanças e Tecnologia:
+
+Conhecimentos prévios: Alguma compreensão sobre finanças pessoais, mas busca aprimorar seu conhecimento.
+Relação com a tecnologia: Confortável com o uso de aplicativos e ferramentas online, mas prefere interfaces claras e diretas.
+Relações hierárquicas: Pode ocupar cargos intermediários em empresas ou ser um empreendedor em crescimento.
+
+Usuário Avançado em Finanças:
+
+Conhecimentos prévios: Possui um bom entendimento de finanças pessoais e busca ferramentas avançadas para análise e tomada de decisão.
+Relação com a tecnologia: Muito familiarizado com aplicativos e tecnologias financeiras, busca funcionalidades sofisticadas e personalizáveis.
+Relações hierárquicas: Pode ocupar cargos de gestão em empresas ou ser um investidor experiente.
 
 **Links Úteis**:
 
