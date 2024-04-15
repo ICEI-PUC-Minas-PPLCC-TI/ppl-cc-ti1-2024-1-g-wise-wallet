@@ -7,7 +7,7 @@ O objetivo do site é fornecer um controle de finanças através de gráficos, a
 * Julio Cesar Thurow Buzzi
 * Gabriel Mayer Clary
 * Samuel Lage Spalla Fajardo
-* Nome completo do aluno 5
+* Eduardo Rassi Caniato
 
 ## Professores responsáveis
 
