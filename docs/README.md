@@ -1,16 +1,6 @@
 # Documentação do Projeto (TIDocs)
 
-Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
-
-A documentação do projeto inclui as seguintes seções:
-
-1. Introdução
-2. Contexto
-3. Concepção
-4. Metodologia
-5. Solução
-6. FAQ (Questões frequentes)
-7. Referências Bibliográficas
+https://docs.google.com/document/d/184353D0ibdSCXlDLH_gM9u8LI5OgD4jCackivebQKq8/edit?usp=sharing
 
 O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
 
@@ -22,28 +12,16 @@ Esta seção traz explicações breves sobre o conjunto de artefatos que precisa
 
 Os problemas em que estamos tratando são a falta de controle financeiro,dívidas e onde envestir de forma segura,educação financeira e melhor controle de gastos.
 
-**Links Úteis**:
-
-- [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-- [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-- [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
 Iremos desenvolver um site cujo sua função e proporcinar para o usuário um controle financeiro atraves de gráficos, assim como um acompanhamento do cartão de credito por meio de gráficos e por fim sugestões personalizadas de como resolver o problema financeiro do usuário de acordo com as opções pré-definidas(Dívidas,investimentp,controle,economia,etc).
 As opções aida estão em análize.
 
-**Links Úteis**:
-
-- [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
 Após entrevistas que realizamos com pessoas com problemas financeiros identificamos que os pricipais culpados disso são as dívidas,tanto as normais quanto a do cartão de crédito,assim como a falta de educação financeira cujo o nosso obejtivo e tornar isso mais fácil atraves de gráficos de gastos e ganhos.
-
-**Links Úteis**:
-
-- [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
@@ -67,79 +45,21 @@ Conhecimentos prévios: Possui um bom entendimento de finanças pessoais e busca
 Relação com a tecnologia: Muito familiarizado com aplicativos e tecnologias financeiras, busca funcionalidades sofisticadas e personalizáveis.
 Relações hierárquicas: Pode ocupar cargos de gestão em empresas ou ser um investidor experiente.
 
-**Links Úteis**:
-
-- [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-- [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
-
 ## Personas
 
 No link a seguir estão os relatórios que tiramos das personas entrevistadas e seus insights: https://docs.google.com/document/d/1lLSNtirKj2CsN-mY4Bwup8HW60uPGrrY/edit?usp=drive_link&ouid=108319171022462178135&rtpof=true&sd=true
-
-**Links Úteis**:
-
-- [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-- [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-- [Rock Content](https://rockcontent.com/blog/personas/)
-- [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
 
 ## Histórias de Usuários
 
 Foram feitas entrevistas com personas selecionadas para simular o público-alvo de nosso produto final, afim de auxiliar o desenvolvimento do software de maneira mais eficaz. No link a seguir estão os relatórios das entrevistas feitas com as personas Ana Alice e Ana Clara: 
 https://docs.google.com/document/d/18R2qJHXERF4PlkZcND1lxs60bOt1Pcx3/edit?usp=drive_link&ouid=108319171022462178135&rtpof=true&sd=true
 
-**Links Úteis**:
-
-- [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-- [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
 
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
-
-Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-**Links Úteis**:
-
-- [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-- [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-## User Flow
-
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-**Links Úteis**:
-
-- [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-- [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-- [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):https://docs.google.com/document/d/184353D0ibdSCXlDLH_gM9u8LI5OgD4jCackivebQKq8/edit?usp=sharing
 
 ## Wireframes
 
 https://www.figma.com/file/unsLrjRPIQSpTmSOvCnMcP/Untitled?type=design&node-id=0%3A1&mode=design&t=OqpLFa9xKD2fMXgU-1
-
-**Links Úteis**:
-
-- [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-- [Figma](https://www.figma.com/)
-- [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-- [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-
-## Gestão de Projetos
-
- Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
-
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
-
-**Links Úteis**:
-
-- [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-- [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-- [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-- [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-- [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
