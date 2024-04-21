@@ -11,8 +11,8 @@ O objetivo do site é fornecer um controle de finanças através de gráficos, a
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Tamara Simões Silva
 
 ## Instruções de utilização
 
