@@ -1,3 +1,37 @@
-body{
-    background-color: green;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #079804;
+    color: #fff;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #ddd;
+}
+#log{
+    width: 60%;
+    ;
 }
