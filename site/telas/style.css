@@ -55,6 +55,38 @@ img.logo{
 
 /* Cabeçalho Final */
 
+/* main Inicio */
+
+h1.problem{
+    margin-left: 10em;
+    margin-bottom: 1em;
+    font-size: 50px;
+    margin-top:1.5em;
+}
+
+
+.problem{
+    margin-left:25em;
+    font-size:20px;
+}
+
+div.first{
+    display:flex;
+    justify-content: space-between;
+}
+
+div.text{
+    display:block;
+}
+
+img.money{
+    margin-top:5em;
+    margin-right:30em;
+    margin-bottom:5em;
+    border:0.3em solid green;
+}
+
+/* main Final */
 
 /* Rodapé Inicio */
 
