@@ -62,7 +62,7 @@ main{
 }
 
 h1.problem{
-    margin-left: 8.5em;
+    margin-left: 9.5em;
     margin-bottom: 1em;
     font-size: 50px;
     margin-top:1.5em;
@@ -71,7 +71,7 @@ h1.problem{
 
 .problem{
     margin-left:20em;
-    font-size:20px;
+    font-size:23px;
 }
 
 div.first{
@@ -85,10 +85,10 @@ div.text{
 
 img.money{
     margin-top:5em;
-    margin-right:12em;
+    margin-right:23em;
     margin-bottom:5em;
     border:0.3em solid green;
-    width:542px;
+    width:700px;
     height:328px;
 }
 
@@ -98,11 +98,11 @@ img.lupa{
     margin-bottom:5em;
     border:0.3em solid green;
     height: 363px;
-    width: 535px;
+    width: 700px;
 }
 
 h1.solucao{
-    margin-right: 10em;
+    margin-right: 15em;
     margin-bottom: 1em;
     font-size: 50px;
     margin-top:1em;
@@ -114,8 +114,23 @@ div.second{
 }
 
 p.solucao{
-        font-size:20px;
+        font-size:23px;
+        
+}
 
+h1.equipe{
+    margin-left: 15em;
+}
+
+
+ol.aluno{
+    margin-left: 26em;
+    
+}
+
+li.aluno{
+    margin-top: 0.5em;
+    
 }
 
 /* main Final */
