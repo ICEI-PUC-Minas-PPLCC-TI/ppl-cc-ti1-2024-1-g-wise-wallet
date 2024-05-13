@@ -3,10 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
     <title>Wise Wallet ©</title>
     <link rel="stylesheet" href="/site/estilo/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="/images/logo.png" alt="Logo wise wallet"></a>
+            <ul>
+                
+                <li><a class="menu" href="#">Login</a></li>
+                <li><a class="menu" href="#">Cadastro</a></li>    
+                <li><a class="menu" href="#">Configurações</a></li>
+                <li><a class="menu" href="#"><i class="ph ph-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
     
 </body>
+<h1>Formulário de Gastos</h1>
+
+    <form action="#" method="post">
+        <label for="rendaMensal">Renda Mensal:</label>
+        <input type="number" id="rendaMensal" name="rendaMensal" required><br><br>
+
+        <label for="gastosFixos">Gastos Fixos:</label>
+        <select id="gastosFixos" name="gastosFixos[]" multiple>
+            <option value="aluguel">Aluguel</option>
+            <option value="condominio">Condomínio</option>
+            <option value="agua">Água</option>
+            <option value="luz">Luz</option>
+        </select>
+        <div id="gastosFixosDetails"></div><br><br>
+        
+
+        <label for="gastosVariaveis">Gastos Variáveis:</label>
+        <select id="gastosVariaveis" name="gastosVariaveis[]" multiple>
+            <option value="supermercado">Supermercado</option>
+            <option value="transporte">Transporte</option>
+            <option value="lazer">Lazer</option>
+            <option value="vestuario">Vestuário</option>
+        </select>
+        <div id="gastosVariaveisDetails"></div><br><br>
+
+        <label for="outrosGastos">Outros Gastos:</label>
+        <select id="outrosGastos" name="outrosGastos[]" multiple>
+            <option value="saude">Saúde</option>
+            <option value="educacao">Educação</option>
+            <option value="entretenimento">Entretenimento</option>
+            <option value="telecomunicacoes">Telecomunicações</option>
+        </select>
+        <div id="outrosGastosDetails"></div><br><br>
+        <label for="cartaoCredito">Se desejar, nos informe o limite do seu cartão do crédito</label>
+        <input type="number" id="cartaoCredito" name="cartaoCredito" required><br><br>
+        <label for="cartaoFatura">Se desejar, nos informe o valor a ser pago na fatura</label>
+        <input type="number" id="cartaoFatura" name="cartaoFatura" required><br><br>
+
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        document.getElementById('gastosFixos').addEventListener('change', function() {
+            const selected = this.value;
+            document.getElementById('gastosFixosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosFixosDetails" placeholder="Detalhes do gasto fixo">' : '';
+        });
+
+        document.getElementById('gastosVariaveis').addEventListener('change', function() {
+            const selected = this.value;
+            document.getElementById('gastosVariaveisDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosVariaveisDetails" placeholder="Detalhes do gasto variável">' : '';
+        });
+
+        document.getElementById('outrosGastos').addEventListener('change', function() {
+            const selected = this.value;
+            document.getElementById('outrosGastosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="outrosGastosDetails" placeholder="Detalhes de outros gastos">' : '';
+        });
+    </script>
 </html>
