@@ -119,12 +119,14 @@ p.solucao{
 }
 
 h1.equipe{
-    margin-left: 15em;
+    margin-left: 19em;
+    margin-top: 5em;
 }
 
 
 ol.aluno{
-    margin-left: 26em;
+    margin-left: 35em;
+    margin-top:2em;
     
 }
 
@@ -133,6 +135,57 @@ li.aluno{
     
 }
 
+.third{
+   display:flex;
+   justify-content: space-between;
+}
+
+.third2{
+    display:block;
+
+}
+
+
+img.equipe{
+    margin-right:25em;
+    margin-bottom:5em;
+    margin-top:-5em;
+    border: 0.3em solid green;
+}
+
+h1.sobrenos{
+    margin-left:18.5em;
+    margin-top:0.5em;
+    font-size:xx-large;
+}
+
+p.sobrenos{
+    margin-left:22em;
+    margin-top:3em;
+    font-size:x-large;
+    margin-bottom:5em;
+}
+
+div.four{
+    display:flex;
+    justify-content: space-between;
+}
+
+div.contato{
+    margin-right:40em;
+    font-size:large;
+    margin-top:1em;
+}
+
+img.contato, .contato1 {
+    height: 5em;
+    width:  5em;
+    margin-top:2em;
+}
+
+img.contato1{
+    margin-right:3em;
+}
 /* main Final */
 
 /* Rodapé Inicio */
