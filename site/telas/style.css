@@ -264,12 +264,67 @@ footer{
 
 
 
-/*MATHEUS - INÍCIO
+/*MATEUS - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border: #333;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 60rem;
+    position: absolute;
+    left:13% ;
+    font-family: 'Roboto', sans-serif;
+}
 
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
 
+label {
+    font-weight: bold;
+}
 
-/*MATHEUS - FIM
+select,
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    background-color: #9BD56D;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A1E9C2;
+}
+
+#btnEnv{
+    padding: 0.8rem 1.2rem;
+    background-color: #9BD56D;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+#btnEnv:hover {
+    background-color: #A1E9C2;
+}
+/*MATEUS - FIM
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
