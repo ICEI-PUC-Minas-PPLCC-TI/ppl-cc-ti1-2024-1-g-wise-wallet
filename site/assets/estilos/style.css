@@ -228,19 +228,27 @@ footer{
 
 
 /*Sugestões*/
+
+    
+
     #sugesttitle{
         background-color: white;
     }
+    #sugestbox{
+        margin: 2% 5%;
+    }
     .card:hover{
        background-color: lightgray;
+       
     }
+    
     .linksugest{
         text-decoration: none;
         color: inherit;
     }
     .linksugest:hover{
         text-decoration: underline;
-        color: inherit;
+        color: darkolivegreen;  
     }
 
 
