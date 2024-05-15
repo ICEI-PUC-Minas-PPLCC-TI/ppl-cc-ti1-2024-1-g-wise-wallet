@@ -216,16 +216,63 @@ footer{
 /*GABRIEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+#resumobox{
+    margin: 2% 5%;
+}
+
+#resultbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4% 1%;
+}
+
+#resultitle{
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
 /*Gráfico 1*/
 
+    #graf1box{
+        width: 33%;
+    }
 
+    #graf1box h3 {
+        width: 300px;
+    }
+
+    #pie-chart1{
+        margin: auto;
+    }
 
 /*Gráfico 2*/
 
+    #graf2box{
+        width: 33%;
+    }
+    
+    #graf2box h3 {
+        width: 300px;
+    }
+
+    #pie-chart2{
+        margin: auto;
+        
+    }
 
 /*Mensagem*/
 
+    #messagebox{
+        width: 33%;
+        
+    }
 
+    #message{
+        margin: 27% 5%;
+    }
+    
 
 /*Sugestões*/
 
@@ -235,8 +282,9 @@ footer{
         background-color: white;
     }
     #sugestbox{
-        margin: 2% 5%;
+        margin: 1% 5%;
     }
+    
     .card:hover{
        background-color: lightgray;
        
@@ -248,9 +296,97 @@ footer{
     }
     .linksugest:hover{
         text-decoration: underline;
-        color: darkolivegreen;  
+        font-style: italic;
     }
 
+
+    /*ARRUMAR OS MEDIA QUERIES*/
+    @media (max-width: 950px) { 
+        #resumobox{
+            margin: 2% 5%;
+        }
+        
+        #resultbox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 4% 1%;
+        }
+        
+        #resultitle{
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+        }
+        
+        /*Gráfico 1*/
+        
+            #graf1box{
+                width: 33%;
+            }
+        
+            #graf1box h3 {
+                width: 300px;
+            }
+        
+            #pie-chart1{
+                margin: auto;
+            }
+        
+        /*Gráfico 2*/
+        
+            #graf2box{
+                width: 33%;
+            }
+            
+            #graf2box h3 {
+                width: 300px;
+            }
+        
+            #pie-chart2{
+                margin: auto;
+                
+            }
+        
+        /*Mensagem*/
+        
+            #messagebox{
+                width: 33%;
+                
+            }
+        
+            #message{
+                margin: 27% 5%;
+            }
+            
+        
+        /*Sugestões*/
+        
+            
+        
+            #sugesttitle{
+                background-color: white;
+            }
+            #sugestbox{
+                margin: 1% 5%;
+            }
+
+            .card:hover{
+               background-color: lightgray;
+               
+            }
+            
+            .linksugest{
+                text-decoration: none;
+                color: inherit;
+            }
+            .linksugest:hover{
+                text-decoration: underline;
+                color: darkolivegreen;  
+            }
+        
+        
+    }
 
 /*GABRIEL - FIM
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
