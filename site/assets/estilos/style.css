@@ -14,47 +14,51 @@
 /* Cabeçalho */
 
 
-header{
-    background-color:green;
-}
+    header{
+        background-color:green;
+        width: 100%;
+    }
 
-nav{
-    display:flex;
-    justify-content: space-between;
-    padding:30px;
+    nav{
+        display: flex;
+        flex-direction: row;
+        padding: 1%;
+        width: 100%;
+    }
 
-}
-ul{
-    display:flex;
-    align-items: center;
-}
+    .logolink{
+        width: 8%;
+    }
 
-li{
-    text-decoration: none;
-    list-style: none;
-    margin-left:15px;
-    margin-right:15px;
-    padding: 10px;
-    border-radius: 5px;
-    height:15px;
-    font-size:xx-large;
-}
+    .logo{
+        width: 100%;
+        border-radius: 35%;
+    }
 
-.menu:hover{
-    text-decoration: underline;
-}
+    .menu{
+        display: flex;
+        margin-left: 55%;
+        margin-top: 2.5%;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+        font-size: 175%;
+        color:black;
+    }
 
-a.menu{
-    color:black;
-    text-decoration: none;
-}
+    .menu a{
+        text-decoration: none;
+        color: black;
+    }
 
-img.logo{
-    margin-left:40px;
-    height:100px;
-    width:100px;
-    border-radius: 5em;
-}
+    .menu li{
+        list-style: none;
+    }
+
+    .menucadastro:hover, .menuconfig:hover, .menulogin:hover{
+        text-decoration: underline;
+    }
 
 
 /* Cabeçalho Final */
@@ -62,20 +66,20 @@ img.logo{
 /* main Inicio */
 
 main#mainjulio{
-    background-color: rgb(87, 248, 87);
+    background-color: #9BD56D;
 }
 
 h1.problem{
-    margin-left: 9.5em;
-    margin-bottom: 1em;
-    font-size: 50px;
-    margin-top:1.5em;
+    margin-left: 8%;
+    margin-bottom: 1.5%;
+    font-size: 300%;
+    margin-top:4%;
 }
 
 
 .problem{
-    margin-left:20em;
-    font-size:23px;
+    margin-left:10%;
+    font-size:200%;
 }
 
 div.first{
@@ -88,28 +92,29 @@ div.text{
 }
 
 img.money{
-    margin-top:5em;
-    margin-right:23em;
-    margin-bottom:5em;
-    border:0.3em solid green;
-    width:700px;
-    height:370px;
+    margin-top:4%;
+    margin-right:10%;
+    margin-bottom:4%;
+    border:0.2em solid green;
+    width:80%;
+    height:80%;
 }
 
 img.lupa{
-    margin-top:5em;
-    margin-left:23em;
-    margin-bottom:5em;
+    margin-top:4%;
+    margin-left:10%;
+    margin-bottom:4%;
     border:0.3em solid green;
-    height: 400px;
-    width: 700px;
+    height:80%;
+    width:40%;
+    margin-right:3%;
 }
 
 h1.solucao{
-    margin-right: 15em;
-    margin-bottom: 1em;
-    font-size: 50px;
-    margin-top:1em;
+    margin-right: 15%;
+    margin-bottom: 1.5%;
+    font-size: 300%;
+    margin-top:10%;
 }
 
 div.second{
@@ -118,24 +123,23 @@ div.second{
 }
 
 p.solucao{
-        font-size:22px;
-        
+        font-size:200%;
+        margin-right:5%;
 }
 
 h1.equipe{
-    margin-left: 19em;
-    margin-top: 5em;
+    margin-top: 40%;
 }
 
 
 ol.aluno{
-    margin-left: 35em;
-    margin-top:2em;
+    margin-left: 15%;
+    margin-top:2%;
     
 }
 
 li.aluno{
-    margin-top: 0.5em;
+    margin-top: 2%;
     
 }
 
@@ -151,23 +155,24 @@ li.aluno{
 
 
 img.equipe{
-    margin-right:25em;
-    margin-bottom:5em;
-    margin-top:-5em;
+    margin-right:15%;
+    margin-bottom:5%;
     border: 0.3em solid green;
+    margin-top:5%;
+
 }
 
 h1.sobrenos{
-    margin-left:18.5em;
-    margin-top:0.5em;
+    margin-left:22%;
+    margin-top:0.5%;
     font-size:xx-large;
 }
 
 p.sobrenos{
-    margin-left:22em;
-    margin-top:3em;
+    margin-left:22%;
+    margin-top:3%;
     font-size:x-large;
-    margin-bottom:5em;
+    margin-bottom:5%;
 }
 
 div.four{
@@ -176,31 +181,46 @@ div.four{
 }
 
 div.contato{
-    margin-right:40em;
+    margin-right:5%;
     font-size:large;
-    margin-top:1em;
+    margin-top:1%;
 }
 
 img.contato, .contato1 {
-    height: 5em;
-    width:  5em;
-    margin-top:2em;
+    height: 30%;
+    width: 15%;
+    margin-top:2%;
+}
+
+div.contatos{
+    display:inline;
+    margin-left:3%;
 }
 
 img.contato1{
-    margin-right:3em;
+    margin-right:5%;
 }
 /* main Final */
 
 /* Rodapé Inicio */
 
 footer{
-    background-color:rgb(8, 34, 8);
+    background-color: green;
     color:white;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     display:flex;
     justify-content: center;
-    font-size:xx-small ;
-    padding: 8px;
+    font-size: 5%;
+    padding: 1%;
+}
+
+footer a{
+    color: inherit;
+}
+
+footer a:hover{
+    font-style: italic;
+    color: whitesmoke
 }
 
 
@@ -216,16 +236,76 @@ footer{
 /*GABRIEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/*Corpo geral*/
+
+
+.bodygabriel{
+    background-color: #9BD56D;
+}
+
+/*Resultado geral*/
+
+#resumobox{
+    margin: 2% 5%;
+}
+
+#resultbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2% 5%;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#resultitle{
+    margin: auto;
+    text-align: center;
+    
+}
+
 /*Gráfico 1*/
 
+    #graf1box{
+        width: 33%;
+        margin-bottom: 1%;
+    }
 
+    #graf1box h3 {
+        width: 300px;
+    }
+
+    #pie-chart1{
+        margin: auto;
+    }
 
 /*Gráfico 2*/
 
+    #graf2box{
+        width: 33%;
+        margin-bottom: 1%;
+    }
+    
+    #graf2box h3 {
+        width: 300px;
+    }
+
+    #pie-chart2{
+        margin: auto;
+    }
 
 /*Mensagem*/
 
+    #messagebox{
+        width: 33%;
+        justify-content: center;
+    }
 
+    #message{
+        margin: 32% 5%;
+    }
+    
 
 /*Sugestões*/
 
@@ -233,10 +313,16 @@ footer{
 
     #sugesttitle{
         background-color: white;
+        margin-bottom: 0;
+        border-radius: 5%;
+        text-align: center;
     }
     #sugestbox{
-        margin: 2% 5%;
+        margin: 1% 5%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 3%;
     }
+    
     .card:hover{
        background-color: lightgray;
        
@@ -248,9 +334,108 @@ footer{
     }
     .linksugest:hover{
         text-decoration: underline;
-        color: darkolivegreen;  
+        font-style: italic;
     }
 
+
+    /*MEDIA QUERY GABRIEL*/
+    @media (max-width: 950px) { 
+        
+        /*Corpo geral*/
+        .bodygabriel{
+            background-color: #9BD56D;
+        }
+        
+        /*Resultado geral*/
+        
+        #resumobox{
+            margin: auto; 
+            margin: 1% 5%;           
+        }
+        
+        #resultbox{
+            display: block;
+            
+            margin: 2% 5%;
+        }
+        
+        #resultitle{
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+        }
+        
+        /*Gráfico 1*/
+        
+            #graf1box{
+                width: 100%;
+            }
+        
+            #graf1box h3 {
+                width: 300px;
+            }
+        
+            #pie-chart1{
+                margin: auto;
+            }
+        
+        /*Gráfico 2*/
+        
+            #graf2box{
+                width: 100%;
+            }
+            
+            #graf2box h3 {
+                width: 300px;
+            }
+        
+            #pie-chart2{
+                margin: auto;
+                
+            }
+        
+        /*Mensagem*/
+        
+            #messagebox{
+                width: 100%;
+                
+            }
+        
+            #message{
+                margin: 5% 5%;
+                text-align: center;
+                font-weight: bolder;
+            }
+            
+        
+        /*Sugestões*/
+        
+            
+        
+            #sugesttitle{
+                background-color: white;
+            }
+            #sugestbox{
+                margin: 1% 5%;
+                background-color: white;
+            }
+
+            .card:hover{
+               background-color: lightgray;
+               
+            }
+            
+            .linksugest{
+                text-decoration: none;
+                color: inherit;
+            }
+            .linksugest:hover{
+                text-decoration: underline;
+                font-style: italic; 
+            }
+        
+        
+    }
 
 /*GABRIEL - FIM
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -261,6 +446,36 @@ footer{
 
 /*SAMUEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.configuracoes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.configuracoes h1 {
+    margin-bottom: 20px;
+}
+
+.configuracoes .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.configuracoes .config-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    margin-bottom: 20px; 
+}
+
+.configuracoes .config-btn:hover {
+    background-color: #0056b3;
+}
 
 
 
