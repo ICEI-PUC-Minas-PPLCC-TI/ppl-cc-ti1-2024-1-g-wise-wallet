@@ -87,17 +87,17 @@
         <!-- Script para adicionar campos de detalhes dos gastos -->
         document.getElementById('gastosFixos').addEventListener('change', function() {
             const selected = this.value;
-            document.getElementById('gastosFixosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosFixosDetails" placeholder="Detalhes do gasto fixo">' : '';
+            document.getElementById('gastosFixosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosFixosDetails" placeholder="Valor do Gasto Fixo">' : '';
         });
 
         document.getElementById('gastosVariaveis').addEventListener('change', function() {
             const selected = this.value;
-            document.getElementById('gastosVariaveisDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosVariaveisDetails" placeholder="Detalhes do gasto variável">' : '';
+            document.getElementById('gastosVariaveisDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosVariaveisDetails" placeholder="Valor do Gasto Variável">' : '';
         });
 
         document.getElementById('outrosGastos').addEventListener('change', function() {
             const selected = this.value;
-            document.getElementById('outrosGastosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="outrosGastosDetails" placeholder="Detalhes de outros gastos">' : '';
+            document.getElementById('outrosGastosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="outrosGastosDetails" placeholder="Valor de Outros Gastos">' : '';
         });
         
         document.getElementById('adicionarCampoGastosFixos').addEventListener('click', function() {
@@ -124,7 +124,7 @@
             const input = document.createElement('input');
             input.setAttribute('type', 'text');
             input.setAttribute('name', 'gastosFixosDetails[]');
-            input.setAttribute('placeholder', 'Detalhes do gasto fixo');
+            input.setAttribute('placeholder', 'Valor do Gasto Fixo');
             div.appendChild(input);
             form.insertBefore(div, this.nextSibling);
         });
@@ -149,7 +149,7 @@
             const input = document.createElement('input');
             input.setAttribute('type', 'text');
             input.setAttribute('name', 'gastosVariaveisDetails[]');
-            input.setAttribute('placeholder', 'Detalhes do gasto variável');
+            input.setAttribute('placeholder', 'Valor do Gasto Variável');
             div.appendChild(input);
             form.insertBefore(div, this.nextSibling);
         });
@@ -175,7 +175,7 @@
             const input = document.createElement('input');
             input.setAttribute('type', 'text');
             input.setAttribute('name', 'outrosGastosDetails[]');
-            input.setAttribute('placeholder', 'Detalhes do gasto variável');
+            input.setAttribute('placeholder', 'Valor dos Outros Gastos');
             div.appendChild(input);
             form.insertBefore(div, this.nextSibling);
         });

@@ -287,7 +287,7 @@ form {
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+#cabeçalho {
     text-align: center;
     color: #333;
     margin-bottom: 2rem;
