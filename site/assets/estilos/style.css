@@ -66,16 +66,16 @@ main#mainjulio{
 }
 
 h1.problem{
-    margin-left: 9.5em;
-    margin-bottom: 1em;
-    font-size: 50px;
-    margin-top:1.5em;
+    margin-left: 8%;
+    margin-bottom: 1.5%;
+    font-size: 300%;
+    margin-top:4%;
 }
 
 
 .problem{
-    margin-left:20em;
-    font-size:23px;
+    margin-left:10%;
+    font-size:200%;
 }
 
 div.first{
@@ -88,28 +88,29 @@ div.text{
 }
 
 img.money{
-    margin-top:5em;
-    margin-right:23em;
-    margin-bottom:5em;
-    border:0.3em solid green;
-    width:700px;
-    height:370px;
+    margin-top:4%;
+    margin-right:10%;
+    margin-bottom:4%;
+    border:0.2em solid green;
+    width:80%;
+    height:80%;
 }
 
 img.lupa{
-    margin-top:5em;
-    margin-left:23em;
-    margin-bottom:5em;
+    margin-top:4%;
+    margin-left:10%;
+    margin-bottom:4%;
     border:0.3em solid green;
-    height: 400px;
-    width: 700px;
+    height:80%;
+    width:40%;
+    margin-right:3%;
 }
 
 h1.solucao{
-    margin-right: 15em;
-    margin-bottom: 1em;
-    font-size: 50px;
-    margin-top:1em;
+    margin-right: 15%;
+    margin-bottom: 1.5%;
+    font-size: 300%;
+    margin-top:10%;
 }
 
 div.second{
@@ -118,24 +119,23 @@ div.second{
 }
 
 p.solucao{
-        font-size:22px;
-        
+        font-size:200%;
+        margin-right:5%;
 }
 
 h1.equipe{
-    margin-left: 19em;
-    margin-top: 5em;
+    margin-top: 40%;
 }
 
 
 ol.aluno{
-    margin-left: 35em;
-    margin-top:2em;
+    margin-left: 15%;
+    margin-top:2%;
     
 }
 
 li.aluno{
-    margin-top: 0.5em;
+    margin-top: 2%;
     
 }
 
@@ -151,23 +151,24 @@ li.aluno{
 
 
 img.equipe{
-    margin-right:25em;
-    margin-bottom:5em;
-    margin-top:-5em;
+    margin-right:15%;
+    margin-bottom:5%;
     border: 0.3em solid green;
+    margin-top:5%;
+
 }
 
 h1.sobrenos{
-    margin-left:18.5em;
-    margin-top:0.5em;
+    margin-left:22%;
+    margin-top:0.5%;
     font-size:xx-large;
 }
 
 p.sobrenos{
-    margin-left:22em;
-    margin-top:3em;
+    margin-left:22%;
+    margin-top:3%;
     font-size:x-large;
-    margin-bottom:5em;
+    margin-bottom:5%;
 }
 
 div.four{
@@ -176,19 +177,24 @@ div.four{
 }
 
 div.contato{
-    margin-right:40em;
+    margin-right:5%;
     font-size:large;
-    margin-top:1em;
+    margin-top:1%;
 }
 
 img.contato, .contato1 {
-    height: 5em;
-    width:  5em;
-    margin-top:2em;
+    height: 30%;
+    width: 15%;
+    margin-top:2%;
+}
+
+div.contatos{
+    display:inline;
+    margin-left:3%;
 }
 
 img.contato1{
-    margin-right:3em;
+    margin-right:5%;
 }
 /* main Final */
 
