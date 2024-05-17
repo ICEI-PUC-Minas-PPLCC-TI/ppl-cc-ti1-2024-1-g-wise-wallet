@@ -12,7 +12,7 @@ new Chart(ctx, {
       'Gasto C'
     ],
     datasets: [{
-      label: 'My First Dataset',
+      label: 'R$',
       data: [300, 50, 100],
       backgroundColor: [
         'rgb(255, 99, 132)',
@@ -36,7 +36,7 @@ new Chart(ctx2, {
       'Gasto C'
     ],
     datasets: [{
-      label: 'My First Dataset',
+      label: 'R$',
       data: [300, 50, 100],
       backgroundColor: [
         'rgb(255, 99, 132)',

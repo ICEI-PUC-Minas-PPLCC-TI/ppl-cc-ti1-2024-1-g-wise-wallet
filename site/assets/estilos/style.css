@@ -14,47 +14,51 @@
 /* Cabeçalho */
 
 
-header{
-    background-color:green;
-}
+    header{
+        background-color:green;
+        width: 100%;
+    }
 
-nav{
-    display:flex;
-    justify-content: space-between;
-    padding:30px;
+    nav{
+        display: flex;
+        flex-direction: row;
+        padding: 1%;
+        width: 100%;
+    }
 
-}
-ul{
-    display:flex;
-    align-items: center;
-}
+    .logolink{
+        width: 8%;
+    }
 
-li{
-    text-decoration: none;
-    list-style: none;
-    margin-left:15px;
-    margin-right:15px;
-    padding: 10px;
-    border-radius: 5px;
-    height:15px;
-    font-size:xx-large;
-}
+    .logo{
+        width: 100%;
+        border-radius: 35%;
+    }
 
-.menu:hover{
-    text-decoration: underline;
-}
+    .menu{
+        display: flex;
+        margin-left: 55%;
+        margin-top: 2.5%;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+        font-size: 175%;
+        color:black;
+    }
 
-a.menu{
-    color:black;
-    text-decoration: none;
-}
+    .menu a{
+        text-decoration: none;
+        color: black;
+    }
 
-img.logo{
-    margin-left:40px;
-    height:100px;
-    width:100px;
-    border-radius: 5em;
-}
+    .menu li{
+        list-style: none;
+    }
+
+    .menucadastro:hover, .menuconfig:hover, .menulogin:hover{
+        text-decoration: underline;
+    }
 
 
 /* Cabeçalho Final */
@@ -62,7 +66,7 @@ img.logo{
 /* main Inicio */
 
 main#mainjulio{
-    background-color: rgb(87, 248, 87);
+    background-color: #9BD56D;
 }
 
 h1.problem{
@@ -201,12 +205,22 @@ img.contato1{
 /* Rodapé Inicio */
 
 footer{
-    background-color:rgb(8, 34, 8);
+    background-color: green;
     color:white;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     display:flex;
     justify-content: center;
-    font-size:xx-small ;
-    padding: 8px;
+    font-size: 5%;
+    padding: 1%;
+}
+
+footer a{
+    color: inherit;
+}
+
+footer a:hover{
+    font-style: italic;
+    color: whitesmoke
 }
 
 
@@ -222,6 +236,15 @@ footer{
 /*GABRIEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/*Corpo geral*/
+
+
+.bodygabriel{
+    background-color: #9BD56D;
+}
+
+/*Resultado geral*/
+
 #resumobox{
     margin: 2% 5%;
 }
@@ -230,19 +253,23 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 4% 1%;
+    margin: 2% 5%;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #resultitle{
     margin: auto;
     text-align: center;
-    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    
 }
 
 /*Gráfico 1*/
 
     #graf1box{
         width: 33%;
+        margin-bottom: 1%;
     }
 
     #graf1box h3 {
@@ -257,6 +284,7 @@ footer{
 
     #graf2box{
         width: 33%;
+        margin-bottom: 1%;
     }
     
     #graf2box h3 {
@@ -265,18 +293,17 @@ footer{
 
     #pie-chart2{
         margin: auto;
-        
     }
 
 /*Mensagem*/
 
     #messagebox{
         width: 33%;
-        
+        justify-content: center;
     }
 
     #message{
-        margin: 27% 5%;
+        margin: 32% 5%;
     }
     
 
@@ -286,9 +313,14 @@ footer{
 
     #sugesttitle{
         background-color: white;
+        margin-bottom: 0;
+        border-radius: 5%;
+        text-align: center;
     }
     #sugestbox{
         margin: 1% 5%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 3%;
     }
     
     .card:hover{
@@ -306,17 +338,25 @@ footer{
     }
 
 
-    /*ARRUMAR OS MEDIA QUERIES*/
+    /*MEDIA QUERY GABRIEL*/
     @media (max-width: 950px) { 
+        
+        /*Corpo geral*/
+        .bodygabriel{
+            background-color: #9BD56D;
+        }
+        
+        /*Resultado geral*/
+        
         #resumobox{
-            margin: 2% 5%;
+            margin: auto; 
+            margin: 1% 5%;           
         }
         
         #resultbox{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 4% 1%;
+            display: block;
+            
+            margin: 2% 5%;
         }
         
         #resultitle{
@@ -328,7 +368,7 @@ footer{
         /*Gráfico 1*/
         
             #graf1box{
-                width: 33%;
+                width: 100%;
             }
         
             #graf1box h3 {
@@ -342,7 +382,7 @@ footer{
         /*Gráfico 2*/
         
             #graf2box{
-                width: 33%;
+                width: 100%;
             }
             
             #graf2box h3 {
@@ -357,12 +397,14 @@ footer{
         /*Mensagem*/
         
             #messagebox{
-                width: 33%;
+                width: 100%;
                 
             }
         
             #message{
-                margin: 27% 5%;
+                margin: 5% 5%;
+                text-align: center;
+                font-weight: bolder;
             }
             
         
@@ -375,6 +417,7 @@ footer{
             }
             #sugestbox{
                 margin: 1% 5%;
+                background-color: white;
             }
 
             .card:hover{
@@ -388,7 +431,7 @@ footer{
             }
             .linksugest:hover{
                 text-decoration: underline;
-                color: darkolivegreen;  
+                font-style: italic; 
             }
         
         
@@ -403,56 +446,6 @@ footer{
 
 /*SAMUEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #079804;
-    color: #fff;
-}
-
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-left: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a.menu {
-    padding: 8px 15px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 5px;
-}
-
-nav ul li a.menu:hover {
-    background-color: #ddd;
-}
-
-#log {
-    width: 60%;
-}
 
 .configuracoes {
     text-align: center;
