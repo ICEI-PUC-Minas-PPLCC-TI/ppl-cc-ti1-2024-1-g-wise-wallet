@@ -135,6 +135,7 @@ h1.equipe{
 ol.aluno{
     margin-left: 15%;
     margin-top:2%;
+    font-size:100%;
     
 }
 
@@ -225,7 +226,38 @@ footer a:hover{
 
 
 
+
+
 /* Rodapé Final */
+
+/*Media Queries*/
+
+@media (max-width: 950px){
+    #headerjulio{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+    }
+
+    #mainjulio{
+        width:100%;
+        background-size:100%;
+    }
+
+    #problemajulio{
+        display:block;
+        width:100%;
+    }
+
+    #solucaojulio{
+        display:block;
+
+    }
+
+}
+
+
 
 
 /*JULIÃO - FINAL
@@ -446,6 +478,58 @@ footer a:hover{
 
 /*SAMUEL - INÍCIO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #079804;
+    color: #fff;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.menu {
+    padding: 8px 15px;
+    color: #333;
+    border-radius: 5px;
+}
+
+nav ul li a.menu:hover {
+    background-color: #ddd;
+}
+
+#log {
+    width: 60%;
+}
+
 
 .configuracoes {
     text-align: center;
