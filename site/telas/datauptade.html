@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise Wallet ©</title>
-    <link rel="stylesheet" href="/site/estilo/style.css">
+    <title>Formulário de Atualização de Gastos</title>
+    <link rel="stylesheet" href="/site/assets/estilos/style.css">
 </head>
 <body>
+
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-1-wise-wallet/blob/master/site/assets/images/logo.png?raw=true" alt="Logo wise wallet"></a>
+            <ul>
+                <li><a class="menu" href="#">Login</a></li>
+                <li><a class="menu" href="#">Cadastro</a></li>
+                <li><a class="menu" href="#">Configurações</a></li>
+                <li><a class="menu" href="#"><i class="ph ph-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
     
-</body>
-</html>
+    <main>
+        <h1>Formulário de Atualização de Gastos</h1>
+
+        <form action="#" method="post" id="formulario">
+            <label for="gastosFixos">Gastos Fixos:</label>
+            <select id="gastosFixos" name="gastosFixos[]" multiple>
+                <option value="aluguel">Aluguel</option>
+                <option value="condominio">Condomínio</option>
+                <option value="agua">Água</option>
+                <option value="luz">Luz</option>
+                <option value="internet">Internet</option>
+                <option value="telefone">Telefone</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="transporte">Transporte</option>
+                <option value="educacao">Educação</option>
+                <option value="saude">Saúde</option>
+                <option value="entretenimento">Entretenimento</option>
+                <option value="vestuario">Vestuário</option>
+            </select>
+            <div id="gastosFixosDetails"></div><br><br>
+
+            <label for="gastosVariaveis">Gastos Variáveis:</label>
+            <select id="gastosVariaveis" name="gastosVariaveis[]" multiple>
+                <option value="supermercado">Supermercado</option>
+                <option value="transporte">Transporte</option>
+                <option value="lazer">Lazer</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="educacao">Educação</option>
+                <option value="saude">Saúde</option>
+                <option value="entretenimento">Entretenimento</option>
+                <option value="telecomunicacoes">Telecomunicações</option>
+            </select>
+            <div id="gastosVariaveisDetails"></div><br><br>
+
+            <label for="outrosGastos">Outros Gastos:</label>
+            <select id="outrosGastos" name="outrosGastos[]" multiple>
+                <option value="saude">Saúde</option>
+                <option value="educacao">Educação</option>
+                <option value="entretenimento">Entretenimento</option>
+                <option value="transporte">Transporte</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="telecomunicacoes">Telecomunicações</option>
+                <option value="beleza">Beleza</option>
+                <option value="viagens">Viagens</option>
+            </select>
+            <div id="outrosGastosDetails"></div><br><br>
+
+            <table id="tabelaGastos">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Valor Gasto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table><br><br>
+
+            <input type="submit" value="Finalizar Formulário">
+        </form>
+    </main>
+
+    <footer>
+        <h1>WiseWallet © - Desenvolvido por 5 alunos da PUC MINAS.</h1>
+    </footer>

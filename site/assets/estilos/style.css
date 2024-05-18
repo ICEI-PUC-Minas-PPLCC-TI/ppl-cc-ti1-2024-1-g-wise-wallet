@@ -561,5 +561,71 @@ button:hover {
 
 
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #079804;
+    color: #fff;
+}
+
+
+nav{
+display: flex;
+flex-direction: row;
+padding: 1%;
+width: 100%;
+}
+
+.logolink{
+width: 8%;
+}
+
+.logo{
+width: 20%;
+border-radius: 60%;
+}
+
+.menu{
+display: flex;
+margin-left: 55%;
+margin-top: 2.5%;
+justify-content: space-between;
+align-items: center;
+width: 30%;
+height: 30%;
+font-size: 175%;
+color:black;
+}
+
+.menu a{
+text-decoration: none;
+color: black;
+}
+
+.menu li{
+list-style: none;
+}
+
+.menucadastro:hover, .menuconfig:hover, .menulogin:hover{
+text-decoration: underline;
+}
+#tabelaGastos {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1em;
+}
+
+#tabelaGastos th, #tabelaGastos td {
+border: 1px solid #ccc;
+padding: 0.5em;
+text-align: left;
+}
+
+#tabelaGastos th {
+background-color: #f0f0f0;
+}
+
 /*RASSI - FIM
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
