@@ -1,6 +1,4 @@
-
-
-
+//CONFIGURANDO GRÁFICOS PARA RECEBER OS DADOS JSON DA PRÓXIMA SPRINT
 const ctx = document.getElementById('pie-chart1');
 
 new Chart(ctx, {
@@ -47,4 +45,9 @@ new Chart(ctx2, {
     }]
   }
 });
+
+
+
+
+
 

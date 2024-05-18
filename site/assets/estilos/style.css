@@ -47,6 +47,26 @@
         border-radius: 35%;
     }
 
+    .menu{
+        display: flex;
+        margin-left: 55%;
+        margin-top: 2.5%;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+        font-size: 175%;
+        color:black;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu li{
+        list-style: none;
+    }
 
     .menucadastro:hover, .menuconfig:hover, .menulogin:hover{
         text-decoration: underline;
@@ -265,10 +285,51 @@ footer a:hover{
     background-color: #9BD56D;
 }
 
+/*Cabeçalho específico Gabriel*/
+
+.headermayer{
+    background-color:green;
+    width: 100%;
+}
+
+.logolinkmayer{
+    width: 8%;
+}
+
+.logomayer{
+    width: 100%;
+    border-radius: 35%;
+}
+
+.menumayer{
+    display: flex;
+    margin-left: 82%;
+    margin-top: 2%;
+    justify-content: space-between;   
+    font-size: 200%;
+    color:black;
+}
+
+.menumayer a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.menuconfigmayer{
+    list-style: none;
+    width: 100%;
+}
+
+.menuconfigmayer:hover{
+    text-decoration: underline;
+}
+
 /*Resultado geral*/
 
 #resumobox{
     margin: 2% 5%;
+    text-align: center;
 }
 
 #resultbox{
@@ -363,6 +424,48 @@ footer a:hover{
     /*MEDIA QUERY GABRIEL*/
     @media (max-width: 950px) { 
         
+        /*Cabeçalho  específico Gabriel*/
+
+        .headermayer{
+            background-color:green;
+            width: 100%;
+        }
+        
+        .logolinkmayer{
+            width: 17.5%;
+            margin: auto;
+        }
+        
+        .logomayer{
+            width: 100%;
+            border-radius: 35%;
+        }
+        
+        .menumayer{
+            display: flex;
+            margin-left: 65%;
+            margin-top: 2%;
+            justify-content: space-between;   
+            font-size: 200%;
+            color:black;
+        }
+        
+        .menumayer a{
+            text-decoration: none;
+            color: black;
+            width: 100%;
+        }
+        
+        .menuconfigmayer{
+            list-style: none;
+            width: 100%;
+        }
+        
+        .menuconfigmayer:hover{
+            text-decoration: underline;
+        }
+
+
         /*Corpo geral*/
         .bodygabriel{
             background-color: #9BD56D;
