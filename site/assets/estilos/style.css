@@ -23,7 +23,7 @@
         left:0;
     }
 
-   
+
     nav{
         display: flex;
         align-items: center;
@@ -95,7 +95,7 @@ h1.problem{
 
 .problem{
     margin-left:10%;
-    font-size:200%;
+    font-size:150%;
 }
 
 div.first{
@@ -139,7 +139,7 @@ div.second{
 }
 
 p.solucao{
-        font-size:200%;
+        font-size:150%;
         margin-right:5%;
 }
 
