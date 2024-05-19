@@ -45,7 +45,7 @@
         text-decoration: none;
         margin-left:50%;
     }
-   
+
 
     .logo{
         width: 100%;
@@ -160,8 +160,8 @@ li.aluno{
 }
 
 .third{
-   display:flex;
-   justify-content: space-between;
+    display:flex;
+    justify-content: space-between;
 }
 
 .third2{
