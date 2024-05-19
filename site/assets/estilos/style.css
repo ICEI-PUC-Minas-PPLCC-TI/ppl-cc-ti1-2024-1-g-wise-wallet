@@ -261,7 +261,7 @@ footer a:hover{
     }
 
     .logo {
-        width: 20%; /* Ajuste conforme necessário */
+        width: 20%; 
     }
 
     ul.cabecalho {
@@ -272,17 +272,21 @@ footer a:hover{
 
     li.menu {
         margin-left: 0;
-        margin-bottom: 2%; /* Ajuste conforme necessário */
+        margin-bottom: 2%; 
     }
 
     .menu a {
-        font-size: 1.2rem; /* Ajuste conforme necessário */
-        margin: 2% 0; /* Ajuste conforme necessário */
+        font-size: 1.2rem; 
+        margin: 2% 0; 
     }
 
     main#mainjulio {
-        padding: 5%; /* Mais espaçamento para pequenos dispositivos */
-        margin-top: 100px; /* Ajustar para a altura do cabeçalho fixo */
+        padding: 5%; 
+
+    }
+
+    h1.problem{
+        margin-top:20%;
     }
 
     h1.problem,
@@ -332,7 +336,7 @@ footer a:hover{
 
     img.contato,
     img.contato1 {
-        width: 30%;
+        width: 20%;
         margin: 5% auto;
         display: block;
     }
