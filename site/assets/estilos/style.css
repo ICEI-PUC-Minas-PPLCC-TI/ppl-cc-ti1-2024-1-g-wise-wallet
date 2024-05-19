@@ -347,7 +347,7 @@ footer a:hover{
     }
 
     footer {
-        display:none; 
+        display:none;    
 }
 }
 
@@ -373,6 +373,7 @@ footer a:hover{
 .headermayer{
     background-color:green;
     width: 100%;
+    position: inherit;
 }
 
 .logolinkmayer{
@@ -642,6 +643,10 @@ footer a:hover{
                 font-style: italic; 
             }
         
+            /*Rodapé*/
+            #footermayer{
+                display: inherit;
+            }
         
     }
 
