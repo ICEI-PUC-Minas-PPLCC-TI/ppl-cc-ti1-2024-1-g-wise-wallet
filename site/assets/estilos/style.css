@@ -6,6 +6,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 /* Configurações Gerais - Final */
 
@@ -16,13 +17,17 @@
 
     header{
         background-color:green;
-        width: 98.3%;
+        width: 100%;
+        z-index:1000;
+        top:0;
+        left:0;
     }
 
+   
     nav{
         display: flex;
-        flex-direction: row;
-        padding: 1%;
+        align-items: center;
+        padding: 2%;
         width: 100%;
         justify-content: space-between;
     }
@@ -242,31 +247,105 @@ footer a:hover{
 
 /*Media Queries*/
 
-@media (max-width: 950px){
-    #headerjulio{
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
+@media (max-width: 950px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
-    #mainjulio{
-        width:100%;
-        background-size:100%;
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #problemajulio{
-        display:block;
-        width:100%;
+    .logo {
+        width: 20%; /* Ajuste conforme necessário */
     }
 
-    #solucaojulio{
-        display:block;
-
+    ul.cabecalho {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
+    li.menu {
+        margin-left: 0;
+        margin-bottom: 2%; /* Ajuste conforme necessário */
+    }
+
+    .menu a {
+        font-size: 1.2rem; /* Ajuste conforme necessário */
+        margin: 2% 0; /* Ajuste conforme necessário */
+    }
+
+    main#mainjulio {
+        padding: 5%; /* Mais espaçamento para pequenos dispositivos */
+        margin-top: 100px; /* Ajustar para a altura do cabeçalho fixo */
+    }
+
+    h1.problem,
+    h1.solucao,
+    h1.equipe,
+    h1.sobrenos,
+    h1.contato {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .problem,
+    p.solucao,
+    p.sobrenos {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    div.first,
+    div.second,
+    div.third2,
+    div.four {
+        display: block;
+        width: 100%;
+    }
+
+    div.text,
+    div.text2,
+    ol.aluno,
+    div.sobre,
+    div.contato {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
+    img.money,
+    img.lupa {
+        width: 30%;
+        margin: 5% auto;
+        display: block;
+    }
+
+    img.equipe {
+        display: none; 
+    }
+
+    img.contato,
+    img.contato1 {
+        width: 30%;
+        margin: 5% auto;
+        display: block;
+    }
+
+    div.contatos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        display:none; 
 }
-
+}
 
 
 
