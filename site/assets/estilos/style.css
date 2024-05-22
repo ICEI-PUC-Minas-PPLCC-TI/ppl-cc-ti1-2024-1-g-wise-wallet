@@ -175,7 +175,8 @@ img.equipe{
     margin-bottom:5%;
     border: 0.3em solid green;
     margin-top:5%;
-
+    width:40%;
+    height:100%;
 }
 
 h1.sobrenos{
@@ -200,6 +201,7 @@ div.contato{
     margin-right:5%;
     font-size:large;
     margin-top:1%;
+    margin-left:20%;
 }
 
 img.contato, .contato1 {
