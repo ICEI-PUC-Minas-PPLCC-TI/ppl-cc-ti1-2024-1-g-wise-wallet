@@ -6,93 +6,80 @@
     <link rel="stylesheet" href="/site/assets/estilos/style.css">
     <title>Wise Wallet ©</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="/site/assets/script/appresultunico.js"></script>
+    <style>
+        .title-button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            text-align: left;
+        }
+        .title-button:hover {
+            color: darkgreen;
+            text-decoration: underline;
+        }
+    </style>
+    <script src="/site/assets/script/julio.js" defer></script>
 </head>
 <body>
     
 <header id="headerjulio">
-        <nav class="teste">
-            <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
-            <ul class="cabecalho">
-                <li class="menu" id="login"><a class="menu" href="login.html">Login</a></li>
-                <li class="menu"><a class="menu" href="cadastro.html">Cadastro</a></li>    
-                <li class="menu"><a class="menu" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
-            </ul>
-            </nav>
+    <nav class="teste">
+        <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
+        <ul class="cabecalho">
+            <li class="menu" id="login"><a class="menu" href="login.html">Login</a></li>
+            <li class="menu"><a class="menu" href="cadastro.html">Cadastro</a></li>    
+            <li class="menu"><a class="menu" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
+        </ul>
+    </nav>
 </header>       
 <main id="mainjulio">
-    <div id="problemajulio" class="first">
-    <div class="text">  
-    <h1 class="problem">O problema</h1>
-    <p class="problem">Nosso projeto visa enfrentar os desafios comuns<br>
-        relacionados ao gerenciamento financeiro, como<br>
-        dificuldades em lidar com dividas, monitorar o cartão de
-        crédito, evitar gastos equivocados e a falta de educação financeira básica.<br>
-        Buscamos oferecer soluções práticas e<br>
-        acessíveis para ajudar as pessoas a superarem essas<br>
-        dificuldades e conquistarem uma vida financeira mais<br>
-        equilibrada e tranquila.
-    </p>
-    </div>   
-    <img class="money"  src="/site/assets/images/dolar.jpeg" alt="Dinheiro subindo">
+    <div class="container">
+        <div class="column">
+            <h1><button class="problem title-button">O problema</button></h1>
+            <img class="money" src="/site/assets/images/dolar.jpeg" alt="Dinheiro subindo">
+        </div>
+        <div class="column">
+            <h1><button class="solucao title-button">A solução</button></h1>
+            <img class="lupa" src="/site/assets/images/LupaPagInicial.jpeg" alt="Lupa com gráfico">
+        </div>
     </div>
+</main>
 
-    <div id="solucaojulio" class="second">
-    <img class="lupa" src="/site/assets/images/LupaPagInicial.jpeg" alt="Lupa com gráfico">
-    <div class="text2">
-    <h1 class="solucao">A solução</h1>
-    <p class="solucao">Nosso projeto tem como objetivo principal ensinar<br>
-    educação financeira básica, proporcionar o<br>
-    acompanhamento dos gastos e ganhos mensais de<br>
-    forma simples e eficiente. Além disso, oferecemos<br>
-    gráficos de fácil visualização para analisar os ganhos<br>
-    e perdas, incluindo um gráfico específico para o<br>
-    cartão de crédito.<br>
-    <br>
-    Também fornecemos dicas de investimento e<br>
-    sugestões sobre como administrar o dinheiro de<br>
-    maneira inteligente, visando ajudar as pessoas a<br>
-    alcançarem uma maior estabilidade financeira e uma<br>
-    vida mais equilibrada.
-    </p>
-    </div>
-    </div>  
 
-    
     <div class="third2">
-    <div class="third">
-    <ol class="aluno">
-        <h1 class="equipe">A Equipe</h1>
-        <li class="aluno">Eduardo Rassi</li>
-        <li class="aluno">Mateus de Carvalho</li>
-        <li class="aluno">Julio Cesar</li>
-        <li class="aluno">Samuel Lage</li>
-        <li class="aluno">Gabriel Mayer</li>
-    </ol>
-
-    <img class="equipe" src="/site/assets/images/WhatsApp Image 2024-05-21 at 21.45.02.jpeg" alt="Foto da Equipe">
-    </div>  
+        <div class="third">
+            <ol class="aluno">
+                <h1 class="equipe">A Equipe</h1>
+                <li class="aluno">Eduardo Rassi</li>
+                <li class="aluno">Mateus de Carvalho</li>
+                <li class="aluno">Julio Cesar</li>
+                <li class="aluno">Samuel Lage</li>
+                <li class="aluno">Gabriel Mayer</li>
+            </ol>
+            <img class="equipe" src="/site/assets/images/WhatsApp Image 2024-05-21 at 21.45.02.jpeg" alt="Foto da Equipe">
+        </div>  
     </div>  
 
     <div class="four">
-    <div class="sobre">
-    <h1 class="sobrenos">Sobre Nós</h1>
-    <p class="sobrenos">O Wise Wallet © é uma inciativa de 5 alunos da PUC<br>Minas que buscam por meio de um software<br>integrado numa interface da web facilitar a<br>visualização da situação financeira do usuário e<br>melhorar sua qualidade de vida no campo<br>econômico.</p>
+        <div class="sobre">
+            <h1 class="sobrenos">Sobre Nós</h1>
+            <p class="sobrenos">O Wise Wallet © é uma inciativa de 5 alunos da PUC<br>Minas que buscam por meio de um software<br>integrado numa interface da web facilitar a<br>visualização da situação financeira do usuário e<br>melhorar sua qualidade de vida no campo<br>econômico.</p>
+        </div>
+        <div class="contato">
+            <h1 class="contato">Entre em contato</h1>
+            <div class="contatos">
+                <a class="contato" href="https://mail.google.com/mail/u/3/?pli=1#inbox?compose=new" target="_blank"><img class="contato1" src="/site/assets/images/gmail.png" alt="logo do gmail"></a>
+                <a class="contato" href="https://web.whatsapp.com/" target="_blank"><img class="contato" src="/site/assets/images/whatssap.png" alt="logo do whatssap"></a>
+            </div>
+        </div>
     </div>
-    <div class="contato">
-    <h1 class="contato">Entre em contato</h1>
-    <div class="contatos">
-    <a class="contato"  href="https://mail.google.com/mail/u/3/?pli=1#inbox?compose=new" target="_blank"><img class="contato1" src="/site/assets/images/gmail.png" alt="logo do gmail"></a>
-    <a class="contato" href="https://web.whatsapp.com/" target="_blank"><img class="contato" src="/site/assets/images/whatssap.png" alt="logo do whatssap"></a>
-    </div>
-    </div>
-    </div>
-    </main>
+</main>
 
-    <footer>
-        <h1>WiseWallet © - Desenvolvido por <a class="team" href="index.html">5 alunos</a> da PUC MINAS.</h1>
-    </footer>
-
+<footer>
+    <h1>WiseWallet © - Desenvolvido por <a class="team" href="index.html">5 alunos</a> da PUC MINAS.</h1>
+</footer>
 
 </body>
 </html>

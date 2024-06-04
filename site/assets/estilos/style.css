@@ -12,6 +12,9 @@
 
 
 
+
+
+
 /* Cabeçalho */
 
 
@@ -112,19 +115,53 @@ img.money{
     margin-right:10%;
     margin-bottom:4%;
     border:0.2em solid green;
-    width:80%;
+    width:40%;
     height:80%;
 }
 
 img.lupa{
     margin-top:4%;
-    margin-left:10%;
     margin-bottom:4%;
     border:0.3em solid green;
     height:80%;
     width:40%;
-    margin-right:3%;
+    margin-right:50%;
 }
+
+
+
+
+/* Mantenha o restante do seu CSS */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Removido o height: 100vh; */
+}
+
+.container h1 {
+    margin-bottom: 0.5em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+.container img {
+    width: 60%; /* Definir a largura da imagem em relação à largura do contêiner */
+    max-height: 60vh; /* Limitar a altura máxima para garantir que a imagem não ultrapasse a altura da tela */
+    object-fit: cover; /* Manter a proporção da imagem e cortar o excesso */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centralizar a imagem horizontalmente */
+}
+
+/* Mantenha o restante do seu CSS */
+
+
+
+
+
 
 h1.solucao{
     margin-right: 15%;
@@ -241,6 +278,21 @@ footer a:hover{
     color: white;
 }
 
+.title-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+.title-button:hover {
+    color: darkgreen;
+    text-decoration: underline;
+}
+.hidden {
+    display: none;
+}
 
 
 
@@ -493,8 +545,8 @@ footer a:hover{
     }
     
     .card:hover{
-       background-color: lightgray;
-       
+        background-color: lightgray;
+
     }
     
     .linksugest{
