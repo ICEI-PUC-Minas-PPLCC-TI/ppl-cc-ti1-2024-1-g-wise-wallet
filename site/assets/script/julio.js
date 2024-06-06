@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/site/assets/data/data.json')
+    fetch('/site/assets/data/julio.json')
         .then(response => response.json())
         .then(data => {
             const problemButton = document.querySelector("button.problem");
