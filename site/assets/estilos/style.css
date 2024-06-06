@@ -264,6 +264,10 @@ footer{
     justify-content: center;
     font-size: 100%;
     padding: 1%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 footer a{
@@ -746,13 +750,13 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #9bd56d;
     color: #fff;
     margin-bottom: 20px; 
 }
 
 .configuracoes .config-btn:hover {
-    background-color: #0056b3;
+    background-color: #9bd56d;
 }
 
 

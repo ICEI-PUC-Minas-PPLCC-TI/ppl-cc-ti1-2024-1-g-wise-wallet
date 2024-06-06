@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/site/assets/estilos/style.css">
+    <title>Wise Wallet ©</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="/site/assets/script/julio.js" defer></script>
+</head>
+<body>
+    
+<header>
+    <nav>
+        <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
+        <ul class="menu">
+            <li><a class="menulogin" href="login.html">Login</a></li>
+            <li><a class="menucadastro" href="cadastro.html">Cadastro</a></li>    
+            <li><a class="menuconfig" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
+        </ul>
+    </nav>
+</header>      
+<div class="change-password-container">
+    <h2>Alterar Senha</h2>
+    <form action="/alterar_senha" method="POST">
+        <label for="current-password">Senha Atual:</label>
+        <input type="password" id="current-password" name="current-password" required>
+        
+        <label for="new-password">Nova Senha:</label>
+        <input type="password" id="new-password" name="new-password" required>
+
+        <label for="confirm-new-password">Confirmar Nova Senha:</label>
+        <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+
+        <button type="submit">Alterar Senha</button>
+    </form>
+</div>
+<footer>
+    <h1>WiseWallet © - Desenvolvido por <a class="team" href="index.html">5 alunos</a> da PUC MINAS.</h1>
+</footer>
