@@ -1,0 +1,31 @@
+
+{
+  "gastosFix": [
+    {
+      "categoria": "Base",
+      "id": 1
+    },
+    {
+      "categoria": "Teste",
+      "id": 2
+    },
+    {
+      "categoria": "Exemplo",
+      "id": 3
+    }
+  ],
+  "gastosVar": [
+    {
+      "categoria": "Base",
+      "id": 1
+    },
+    {
+      "categoria": "Teste",
+      "id": 2
+    },
+    {
+      "categoria": "Exemplo",
+      "id": 3
+    }
+  ]
+}
