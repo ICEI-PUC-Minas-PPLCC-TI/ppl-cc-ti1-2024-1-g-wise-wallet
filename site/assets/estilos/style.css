@@ -796,7 +796,8 @@ label {
 
 select,
 input[type="number"],
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;

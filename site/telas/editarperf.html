@@ -23,11 +23,30 @@
     </nav>
 </header>
 <main>
-    <div>
-    <button onclick="location.href='update_form.html'" class="update-button">Formulário de Update</button>
-    </div>
+    <section class="profile-edit">
+        <h2>Editar Perfil</h2>
+        <form action="atualizar_perfil.html" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="profile-pic">Alterar Foto:</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="current-email">Email Atual:</label>
+                <input type="text" id="current-email" name="current-email" placeholder="seu.email@exemplo.com" disabled>
+                <label for="email">Alterar Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="current-name">Nome Atual:</label>
+                <input type="text" id="current-name" name="current-name" placeholder="Seu Nome" disabled>
+                <label for="name">Alterar Nome:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <button type="button" class="update-button">Salvar Alterações</button>
+        </form>
+    </section>
 </main>
+<script src="../assets/script/editarperf.js"></script>
 </body>
-<footer>
-    <h1>WiseWallet © - Desenvolvido por <a class="team" href="index.html">5 alunos</a> da PUC MINAS.</h1>
-</footer>
+
+</html>
