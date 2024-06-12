@@ -139,7 +139,7 @@ footer a:hover{
     margin-left: 82%;
     margin-top: 2%;
     justify-content: space-between;   
-    font-size: 200%;
+    font-size: 300%;
     color:black;
 }
 
@@ -165,7 +165,17 @@ footer a:hover{
     text-align: center;
 }
 
-#resultbox{
+#resultbox1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2% 5%;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#resultbox2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -181,14 +191,14 @@ footer a:hover{
     
 }
 
-/*Gráfico 1*/
+/*Gráfico 1(TORTA)*/
 
     #graf1box{
         width: 33%;
         margin-bottom: 1%;
     }
 
-    #graf1box h3 {
+    #graf1box#resultitle {
         width: 300px;
     }
 
@@ -196,14 +206,14 @@ footer a:hover{
         margin: auto;
     }
 
-/*Gráfico 2*/
+/*Gráfico 2(TORTA)*/
 
     #graf2box{
         width: 33%;
         margin-bottom: 1%;
     }
     
-    #graf2box h3 {
+    #graf2box#resultitle{
         width: 300px;
     }
 
@@ -211,15 +221,36 @@ footer a:hover{
         margin: auto;
     }
 
-/*Mensagem*/
+/*Gráfico 1(LINHA)*/
 
-    #messagebox{
-        width: 33%;
-        justify-content: center;
+    #graf1box{
+        width: 50%;
+        margin-bottom: 1%;
     }
 
-    #message{
-        margin: 32% 5%;
+    #graf1box#resultitle {
+        width: 300px;
+    }
+
+    #line-chart1{
+        margin: auto;
+        width: 70%;
+    }
+
+/*Gráfico 2(LINHA)*/
+
+    #graf2box{
+        width: 50%;
+        margin-bottom: 1%;
+    }
+
+    #graf2box#resultitle{
+        width: 300px;
+    }
+
+    #line-chart2{
+        margin: auto;
+        width: 70%;
     }
 
 /*Sugestões*/
@@ -308,9 +339,8 @@ footer a:hover{
             margin: 1% 5%;           
         }
         
-        #resultbox{
+        #resultbox1{
             display: block;
-            
             margin: 2% 5%;
         }
         
@@ -346,7 +376,6 @@ footer a:hover{
         
             #pie-chart2{
                 margin: auto;
-                
             }
         
         /*Mensagem*/

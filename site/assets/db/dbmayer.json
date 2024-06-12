@@ -1,31 +1,110 @@
-
 {
-  "gastosFix": [
-    {
-      "categoria": "Base",
-      "id": 1
-    },
-    {
-      "categoria": "Teste",
-      "id": 2
-    },
-    {
-      "categoria": "Exemplo",
-      "id": 3
-    }
-  ],
-  "gastosVar": [
-    {
-      "categoria": "Base",
-      "id": 1
-    },
-    {
-      "categoria": "Teste",
-      "id": 2
-    },
-    {
-      "categoria": "Exemplo",
-      "id": 3
-    }
-  ]
+  "mes1": {
+    "gastosFix": [
+      {
+        "categoria": "Base",
+        "valor": "1731",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "1284",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "956",
+        "id": 3
+      }
+    ],
+    "gastosVar": [
+      {
+        "categoria": "Base",
+        "valor": "1254",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "1663",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "412",
+        "id": 3
+      }
+    ]
+  },
+  "mes2": {
+    "gastosFix": [
+      {
+        "categoria": "Base",
+        "valor": "1789",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "831",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "1472",
+        "id": 3
+      }
+    ],
+    "gastosVar": [
+      {
+        "categoria": "Base",
+        "valor": "1537",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "1943",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "498",
+        "id": 3
+      }
+    ]
+  },
+  "mes3": {
+    "gastosFix": [
+      {
+        "categoria": "Base",
+        "valor": "1045",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "1622",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "887",
+        "id": 3
+      }
+    ],
+    "gastosVar": [
+      {
+        "categoria": "Base",
+        "valor": "1347",
+        "id": 1
+      },
+      {
+        "categoria": "Teste",
+        "valor": "1834",
+        "id": 2
+      },
+      {
+        "categoria": "Exemplo",
+        "valor": "576",
+        "id": 3
+      }
+    ]
+  }
 }

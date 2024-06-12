@@ -1,12 +1,17 @@
 //RECEBENDO OS DADOS DO JSON SERVER
 let gastosjsFix = []
 let gastosjsVar = []
+let valorjsFix = []
+let valorjsVar = []
 async function carregarDados() {
-  const response = await fetch("/site/assets/db/dbmayer.json").catch(err => console.error(err))
+  const response = await fetch("/site/assets/db/dbmayer.json")
   const data = await response.json()
   console.log(data)
-  data.gastosFix.forEach(categoria => gastosjsFix.push(categoria.categoria))
-  data.gastosVar.forEach(categoria => gastosjsVar.push(categoria.categoria))
+  data.mes1.gastosFix.forEach(categoria => gastosjsFix.push(categoria.categoria))
+  data.mes1.gastosVar.forEach(categoria => gastosjsVar.push(categoria.categoria))
+
+  data.mes1.gastosFix.forEach(valor => valorjsFix.push(valor.valor))
+  data.mes1.gastosVar.forEach(valor => valorjsVar.push(valor.valor))
   
   //CONFIGURANDO GRÁFICOS PARA RECEBER OS DADOS JSON DA PRÓXIMA SPRINT
   const ctx = document.getElementById('pie-chart1');
@@ -17,7 +22,7 @@ async function carregarDados() {
       labels: gastosjsFix,
       datasets: [{
         label: 'R$',
-        data: [300, 50, 100],
+        data: valorjsFix,
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
@@ -34,10 +39,10 @@ async function carregarDados() {
   new Chart(ctx2, {
     type: 'pie',
     data: {
-      labels: gastosjsVar,
+      labels: gastosjsFix,
       datasets: [{
         label: 'R$',
-        data: [300, 50, 100],
+        data: valorjsVar,
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
@@ -47,12 +52,12 @@ async function carregarDados() {
       }]
     }
   });
+
 }
+
+  
 
 //TESTES
 window.onload = carregarDados;
 console.log(gastosjsFix)
 console.log(gastosjsVar)
-
-
-//BASE DE DADOS FICTÍCIO COMO A RESPOSTA REAL NECESSITA DA "LINKAGEM DO BD DE OUTROS PARTICIPANTES
