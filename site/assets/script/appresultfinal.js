@@ -73,8 +73,8 @@ async function carregarDados() {
   criarGraficoPizza('pie-chart2', labelsVar, dataVar);
 
   // Configurar gráficos de linha
-  criarGraficoLinha('line-chart1', 'Totais', [gastosMes1Fix, gastosMes2Fix, gastosMes3Fix]);
-  criarGraficoLinha('line-chart2', 'Totais', [gastosMes1Var, gastosMes2Var, gastosMes3Var]);
+  criarGraficoLinha('line-chart1', 'R$', [gastosMes1Fix, gastosMes2Fix, gastosMes3Fix]);
+  criarGraficoLinha('line-chart2', 'R$', [gastosMes1Var, gastosMes2Var, gastosMes3Var]);
 }
 
 function criarGraficoPizza(elementId, labels, data) {
