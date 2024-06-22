@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <link rel="stylesheet" href="/site/assets/estilos/forum.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header id="headerjulio">
+        <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
+        <nav class="teste">
+            <ul class="cabecalho">
+                <li class="menu"><a class="menu" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mensagens</h1>
+        <div id="mensagens"></div>
+    </main>
+    <script>
+        async function loadMessages() {
+            try {
+                const response = await fetch('http://localhost:3000/mensagens');
+                const messages = await response.json();
+                const messagesDiv = document.getElementById('mensagens');
+                messagesDiv.innerHTML = '';
+
+                messages.forEach(message => {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.innerHTML = `
+                        <p><strong>Nome:</strong> ${message.nome}</p>
+                        <p><strong>Mensagem:</strong> <span id="mensagem-${message.id}" contenteditable="true">${message.mensagem}</span></p>
+                        <p><strong>Data:</strong> ${message.data}</p>
+                        <button class="botaoeditar" onclick="editMessage(${message.id})">Editar</button>
+                        <button class="botaoexcluir"  onclick="deleteMessage(${message.id})">Excluir</button>
+                    `;
+                    messagesDiv.appendChild(messageDiv);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar mensagens:', error.message);
+            }
+        }
+
+        async function editMessage(id) {
+            window.location.href = `editar_mensagens.html?id=${id}`;
+        }
+
+        async function deleteMessage(id) {
+            try {
+                const response = await fetch(`http://localhost:3000/mensagens/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao excluir mensagem.');
+                }
+
+                alert('Mensagem excluída com sucesso!');
+            } catch (error) {
+                console.error('Erro ao excluir mensagem:', error.message);
+            } finally {
+                loadMessages(); 
+            }
+        }
+
+        window.onload = loadMessages;
+    </script>
+</body>
+</html>
