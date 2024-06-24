@@ -1,39 +1,39 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Wise Wallet
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: de Carvalho
+    given-names: Mateus
+  - family-names: Rassi
+    given-names: Eduardo
+  - family-names: Buzzi
+    given-names: Julio
+  - family-names: Mayer
+    given-names: Gabriel
+  - family-names: Lage
+    given-names: Samuel
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: 
-    given-names: 
+    given-names: Romel
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: 
-    given-names: 
+    given-names: Tamara
 keywords:
-  - 
-  - 
-repository-code: 
+  - Finanças
+  - Sugestões financeiras
+  - Gráficos
+
+repository-code: https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-1-wise-wallet/tree/master
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
 =======
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Wise Wallet
 authors:
   - family-names: 
     given-names: 
