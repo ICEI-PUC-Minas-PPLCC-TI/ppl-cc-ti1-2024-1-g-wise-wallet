@@ -2963,3 +2963,7 @@ input:-internal-autofill-selected {
   padding: 5px;
   margin: 0 5px;
 }
+
+.wire {
+  display:block;
+}
