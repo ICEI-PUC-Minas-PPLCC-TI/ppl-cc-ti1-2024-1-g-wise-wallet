@@ -3,63 +3,31 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Wise Wallet
 authors:
-  - family-names: de Carvalho
+  - family-names: de Carvalho Rodrigues
     given-names: Mateus
-  - family-names: Rassi
+  - family-names: Rassi Caniato
     given-names: Eduardo
-  - family-names: Cesar
+  - family-names: Cesar Thurow Buzzi
     given-names: Julio
-  - family-names: Mayer
+  - family-names: Mayer Clary
     given-names: Gabriel
-  - family-names: Lage
+  - family-names: Lage Spalla Fajardo
     given-names: Samuel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Carneiro
-    given-names: Romel
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Silva
+    family-names: Simões Silva
     given-names: Tamara
 keywords:
-  - Finanças
+  - Controle de Finanças
   - Sugestões financeiras
-  - Gráficos
+  - Resultados em gráficos
 
 repository-code: https://github.com/ICEI-PUC-Minas-PPLCC-TI/ti-1-ppl-cc-m-20241-1-wise-wallet/tree/master
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
-=======
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: Wise Wallet
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
+
