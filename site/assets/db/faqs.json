@@ -1,0 +1,29 @@
+{
+    "faqs": [
+        {
+            "question": "O que é um site de controle de finanças pessoais?",
+            "answer": "Um site de controle de finanças pessoais é uma plataforma online que ajuda os usuários a gerenciar suas finanças, rastrear despesas, criar orçamentos, definir metas financeiras e analisar seus hábitos de consumo. Ele oferece ferramentas para organizar e monitorar todas as suas transações financeiras em um único lugar."
+        },
+        {
+            "question": "Como funciona o processo de cadastro e login?",
+            "answer": "Para se cadastrar, o usuário deve acessar a página de registro, fornecer informações básicas como nome, e-mail e criar uma senha. Após confirmar o e-mail de verificação, ele pode fazer login usando suas credenciais."
+        },
+        {
+            "question": "Há algum custo para usar o site?",
+            "answer": "O site oferece um plano gratuito com funcionalidades básicas, como rastreamento de despesas e criação de orçamentos. Para recursos avançados, como integração com contas bancárias, relatórios detalhados e suporte prioritário, há planos pagos com preços variando de acordo com as funcionalidades incluídas. Detalhes sobre os planos podem ser encontrados na página de preços do site."
+        },
+        {
+            "question": "O site oferece relatórios e gráficos de análise financeira?",
+            "answer": "Sim, o site oferece uma variedade de relatórios e gráficos, incluindo gráficos de pizza mostrando a distribuição das despesas por categoria e gráficos de barras comparando receitas e despesas ao longo do tempo."
+        },
+        {
+            "question": "Como posso definir e acompanhar metas financeiras?",
+            "answer": "Instruções sobre como criar metas financeiras, como poupança ou pagamento de dívidas, e acompanhar o progresso dessas metas."
+        },
+        {
+            "question":"Como faço para inserir meus dados no sistema para começar a usá-lo?",
+            "answer":"Para começar a utilizar o sistema, você terá à disposição um formulário desenvolvido pela nossa equipe. Ao preenchê-lo com seus dados financeiros, o sistema irá processá-los e fornecerá um relatório inicial para você."
+        }
+    ]
+}
+

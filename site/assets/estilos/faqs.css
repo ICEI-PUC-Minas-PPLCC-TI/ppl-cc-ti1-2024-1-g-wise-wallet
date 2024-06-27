@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: green;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 20vh; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    box-sizing: border-box; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul.cabecalho {
+    display: flex;
+    justify-content: space-between; 
+    list-style-type: none;
+    text-decoration: none;
+    align-items: center;
+    gap: 4%;
+}
+
+ul.cabecalho li {
+    font-size: 4vw;
+}
+
+ul.cabecalho li a {
+    color: black;
+    text-decoration: none;
+    width: 6px;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    border-radius: 35%;
+}
+
+.menucadastro:hover a, .menuconfig:hover a, .menulogin:hover a {
+    text-decoration: underline;
+}
+
+.container {
+    text-align: left;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-left: 4px solid green;
+    padding-left: 10px;
+}
