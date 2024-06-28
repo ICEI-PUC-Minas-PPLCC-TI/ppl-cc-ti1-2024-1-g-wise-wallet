@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // ID do usuário logado hardcoded
         const userId = 1;
-        const apiUrl = `https://8bd457a9-c678-4f17-ae20-4589bd4d8882-00-2t2engj1f57g.kirk.replit.dev/usuarios/${userId}`;
+        const apiUrl = `./assets/db/db.json/usuarios/${userId}`;
 
         try {
             // Obter dados do usuário atual

@@ -1,0 +1,18 @@
+{
+    "name": "lab-jsonserver",
+    "version": "1.0.0",
+    "description": "JSONServer para Wise Wallet",
+    "main": "index.js",
+    "scripts": {
+      "start": "json-server --watch /assets/db/db.json"
+    },
+    "keywords": [],
+    "author": "Gabriel Mayer Clary",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "json-server": "^0.17.3"
+    }
+  }
+  

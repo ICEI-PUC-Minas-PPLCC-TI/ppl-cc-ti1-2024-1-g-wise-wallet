@@ -1,0 +1,26 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "login": "admin",
+        "senha": "1234",
+        "nome": "Jose Da Silva",
+        "email": "12345@gmail.com"
+      },
+      {
+        "id": 2,
+        "login": "user",
+        "senha": "123",
+        "nome": "Usuario Comum",
+        "email": "user@abc.com"
+      },
+      {
+        "id": 3,
+        "login": "rommelcarneiro",
+        "senha": "12345",
+        "nome": "Rommel Carneiro",
+        "email": "rommel@abc.com"
+      }
+    ]
+    
+  }
