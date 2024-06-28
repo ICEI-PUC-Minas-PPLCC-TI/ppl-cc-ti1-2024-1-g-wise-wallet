@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wise Wallet ©</title>
-    <link rel="stylesheet" href="/site/estilo/style.css">
+    <link rel="stylesheet" href="/site/assets/estilos/cadastro.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="/site/assets/script/loginapp.js"></script>
 </head>
-<body>
-    
+<body class="bodygabriel">
+    <header class="headermayer">
+        <nav>          
+            <a href="index.html" class="logolinkmayer"><img class="logomayer" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
+            <ul class="menumayer">
+                <li class="menuconfigmayer"><a  href="config.html"><i id="userconfignav" class="ph ph-user-circle-gear"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="cadastrotitle">Faça seu Login</h2>
+        <form id="formcadastro">
+            <label for="username">Nome de usuário</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Senha</label><br>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Finalizar Cadastro</button>
+        </form>
+    </main>
 </body>
 </html>
