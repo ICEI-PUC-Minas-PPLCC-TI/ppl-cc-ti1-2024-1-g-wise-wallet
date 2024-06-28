@@ -1,28 +1,63 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo implementa uma API RESTful baseada no JSONServer
-//
-// Para montar um servidor para o seu projeto, acesse o projeto 
-// do JSONServer no Replit, faça o FORK do projeto e altere o 
-// arquivo db.json para incluir os dados do seu projeto.
-//
-//
-// Autor: Gabriel Mayer Clary
-// Data: 28/06/2024
-// Wise Wallet - T.I. 1 - Aplicações Web
-
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('/assets/db/db.json')
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
 const cors = require('cors');
 
-// Para permitir que os dados sejam alterados, altere a linha abaixo
-// colocando o atributo readOnly como false.
-const middlewares = jsonServer.defaults()
+const app = express();
+const port = 3000;
 
-server.use(cors())
-server.use(middlewares)
-server.use(router)
-server.listen(3000, () => {
-  console.log('JSON Server is running em http://localhost:5502')
-})
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+app.use(express.static('telas'));
+
+// Rota para cadastrar um novo usuário
+app.post('/cadastrar', (req, res) => {
+    const novoUsuario = req.body;
+
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+
+        const emailExiste = db.usuarios.some(user => user.email === novoUsuario.email);
+        if (emailExiste) {
+            res.status(400).send('E-mail já cadastrado.');
+            return;
+        }
+
+        const usuarioExiste = db.usuarios.some(user => user.login === novoUsuario.login);
+        if (usuarioExiste) {
+            res.status(400).send('Nome de usuário já cadastrado.');
+            return;
+        }
+
+        const senhaExiste = db.usuarios.some(user => user.senha === novoUsuario.senha);
+        if (senhaExiste) {
+            res.status(400).send('Senha já cadastrada.');
+            return;
+        } 
+
+        db.usuarios.push(novoUsuario);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+
+            res.status(200).send('Usuário cadastrado com sucesso.');
+        });
+    });
+});
+
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});

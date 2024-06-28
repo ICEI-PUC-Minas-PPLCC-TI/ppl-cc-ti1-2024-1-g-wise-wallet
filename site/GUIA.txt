@@ -1,0 +1,12 @@
+Para testar o funcionamento do site fazer o seguinte passo a passo: 
+
+-> Instalar o Node.js na sua máquina
+-> Abrir a pasta "/site..." no seu terminal
+-> Escrever no terminal: 
+    -> npm install -g nodemon
+    -> npm start
+    -> npm run dev
+-> Abra a pasta index.html no VSCODE com a extensão Live Server
+OU
+-> Abra o navegador e acesse 'http://localhost:3000'.
+-> Se tudo correr bem, o site deverá estar funcional :)

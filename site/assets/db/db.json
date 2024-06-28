@@ -1,26 +1,32 @@
 {
-    "usuarios": [
-      {
-        "id": 1,
-        "login": "admin",
-        "senha": "1234",
-        "nome": "Jose Da Silva",
-        "email": "12345@gmail.com"
-      },
-      {
-        "id": 2,
-        "login": "user",
-        "senha": "123",
-        "nome": "Usuario Comum",
-        "email": "user@abc.com"
-      },
-      {
-        "id": 3,
-        "login": "rommelcarneiro",
-        "senha": "12345",
-        "nome": "Rommel Carneiro",
-        "email": "rommel@abc.com"
-      }
-    ]
-    
-  }
+  "usuarios": [
+    {
+      "id": 1719601291904,
+      "login": "gabrielmayerclary",
+      "senha": "senhagabriel",
+      "nome": "Gabriel Mayer Clary",
+      "email": "gabrielm05.clary@gmail.com"
+    },
+    {
+      "id": 1719601330954,
+      "login": "buzzijulio",
+      "senha": "senhajulio",
+      "nome": "Julio Thurow Buzzi",
+      "email": "juliocesar.thurowbuzzi@gmail.com"
+    },
+    {
+      "id": 1719601886093,
+      "login": "nodemon",
+      "senha": "nodemon1",
+      "nome": "Nodemon Test",
+      "email": "nodemon@js.com"
+    },
+    {
+      "id": 1719602354344,
+      "login": "bezin031",
+      "senha": "123",
+      "nome": "Bernardo Alves",
+      "email": "bernardoalves222@gmail.com"
+    }
+  ]
+}
