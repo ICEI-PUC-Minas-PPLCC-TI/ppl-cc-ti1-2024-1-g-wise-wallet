@@ -13,70 +13,68 @@
 
 /* Cabeçalho */
 
+header {
+    background-color: green;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
 
-    header{
-        background-color:green;
-        width: 100%;
-        z-index:1000;
-        top:0;
-        left:0;
-    }
+nav {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+    justify-content: space-between;
+}
 
+ul.cabecalho {
+    display: flex;
+    justify-content: flex-end; /* Ajustado para alinhar à direita */
+    list-style-type: none;
+    align-items: center;
+    margin-right: 2%; /* Adicionado espaçamento à direita */
+}
 
-    nav{
-        display: flex;
-        align-items: center;
-        padding: 2%;
-        width: 100%;
-        justify-content: space-between;
-    }
+li.menu {
+    margin-left: 25px; /* Ajustado o espaçamento entre os itens */
+}
 
-    ul.cabecalho{
-        display:flex;
-        justify-content: end;
-        list-style-type: none;
-        text-decoration: none;
-        align-items: center;
-    }
+.logo {
+    width: 100%;
+    border-radius: 35%;
+}
 
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Ajustado para alinhar à direita */
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    font-size: 175%;
+    color: black;
+}
 
-    li.menu{
-        text-decoration: none;
-        margin-left:50%;
-    }
+.menu a {
+    text-decoration: none;
+    color: black;
+}
 
+.menu li {
+    list-style: none;
+    margin-left: 2%; /* Ajustado o espaçamento entre os itens */
+}
 
-    .logo{
-        width: 100%;
-        border-radius: 35%;
-    }
-
-    .menu{
-        display: flex;
-        margin-left: 55%;
-        margin-top: 2.5%;
-        justify-content: space-between;
-        align-items: center;
-        width: 30%;
-        height: 30%;
-        font-size: 175%;
-        color:black;
-    }
-
-    .menu a{
-        text-decoration: none;
-        color: black;
-    }
-
-    .menu li{
-        list-style: none;
-    }
-
-    .menucadastro:hover, .menuconfig:hover, .menulogin:hover{
-        text-decoration: underline;
-    }
+.menucadastro:hover,
+.menuconfig:hover,
+.menulogin:hover {
+    text-decoration: underline;
+}
 
 /* Cabeçalho Final */
+
+
 
 /* main Inicio */
 
@@ -242,7 +240,7 @@ img.contato, .contato1 {
 
 div.contatos{
     display:inline;
-    margin-left:3%;
+    margin-left:2%;
 }
 
 img.contato1{
@@ -401,6 +399,21 @@ footer a:hover{
         display:none;    
 }
 }
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    display:flex;
+    justify-content: center;
+}
+
 
 
 
