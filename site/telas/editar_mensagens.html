@@ -1,131 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Mensagem</title>
     <link rel="stylesheet" href="/site/assets/estilos/forum.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-</head>
+    </head>
 <body>
-    <header id="headerjulio">
-        <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
-        <nav class="teste">
-            <ul class="cabecalho">
-                <li class="menu"><a class="menu" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <h1>Editar Mensagem</h1>
         <form id="editForm">
+            <input type="hidden" id="messageId">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
-            
+            <input type="text" id="nome" name="nome" readonly><br><br>
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea><br><br>
-            
+            <textarea id="mensagem" name="mensagem"></textarea><br><br>
             <label for="data">Data:</label>
             <input type="text" id="data" name="data" readonly><br><br>
-            
-            <button type="button" id="submitButton">Salvar</button>
+            <button type="submit">Salvar</button>
         </form>
     </main>
     <script>
-       
+        const urlParams = new URLSearchParams(window.location.search);
+        const messageId = urlParams.get('id');
+
         async function loadMessage() {
             try {
-                
-                const urlParams = new URLSearchParams(window.location.search);
-                const messageId = urlParams.get('id');
-                
-                
                 const response = await fetch(`http://localhost:3000/mensagens/${messageId}`);
-                const messageData = await response.json();
+                const message = await response.json();
 
-            
-                document.getElementById('nome').value = messageData.nome;
-                document.getElementById('mensagem').value = messageData.mensagem;
-                document.getElementById('data').value = messageData.data; 
+                document.getElementById('messageId').value = message.id;
+                document.getElementById('nome').value = message.nome;
+                document.getElementById('mensagem').value = message.mensagem;
+                document.getElementById('data').value = message.data;
             } catch (error) {
                 console.error('Erro ao carregar mensagem:', error.message);
             }
         }
 
-      
-        async function saveEditedMessage() {
+        async function editMessage() {
+            const messageId = document.getElementById('messageId').value;
+            const mensagem = document.getElementById('mensagem').value;
+
             try {
-               
-                const urlParams = new URLSearchParams(window.location.search);
-                const messageId = urlParams.get('id');
-                
-               
-                const newName = document.getElementById('nome').value;
-                const newMessage = document.getElementById('mensagem').value;
-                const newDate = new Date().toISOString().split('T')[0]; 
-
-                if (newMessage.trim() === '') {
-                    throw new Error('Nenhuma mensagem fornecida.');
-                }
-
-            
                 const response = await fetch(`http://localhost:3000/mensagens/${messageId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({
-                        nome: newName,
-                        mensagem: newMessage,
-                        data: newDate 
-                    })
+                    body: JSON.stringify({ mensagem })
                 });
 
                 if (!response.ok) {
-                    throw new Error('Erro ao editar mensagem');
+                    throw new Error('Erro ao editar mensagem.');
                 }
 
-             
-                alert(`Mensagem com ID ${messageId} editada com sucesso!`);
-
-                
-                loadMessages();
+                alert('Mensagem editada com sucesso!');
+                window.location.href = 'mensagens.html';
             } catch (error) {
                 console.error('Erro ao editar mensagem:', error.message);
             }
         }
 
-    
         window.onload = loadMessage;
-
-      
-        document.getElementById('submitButton').addEventListener('click', function() {
-            saveEditedMessage(); 
+        document.getElementById('editForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            editMessage();
         });
-
-     
-        async function loadMessages() {
-            try {
-                const response = await fetch('http://localhost:3000/mensagens');
-                const messages = await response.json();
-                const messagesDiv = document.getElementById('mensagens');
-                messagesDiv.innerHTML = '';
-
-                messages.forEach(message => {
-                    const messageDiv = document.createElement('div');
-                    messageDiv.innerHTML = `
-                        <p><strong>Nome:</strong> ${message.nome}</p>
-                        <p><strong>Mensagem:</strong> <span id="mensagem-${message.id}" contenteditable="true">${message.mensagem}</span></p>
-                        <p><strong>Data:</strong> ${message.data}</p>
-                        <button onclick="editMessage(${message.id})">Editar</button>
-                        <button onclick="deleteMessage(${message.id})">Excluir</button>
-                    `;
-                    messagesDiv.appendChild(messageDiv);
-                });
-            } catch (error) {
-                console.error('Erro ao carregar mensagens:', error.message);
-            }
-        }
     </script>
 </body>
 </html>

@@ -26,16 +26,19 @@
                 const response = await fetch('http://localhost:3000/mensagens');
                 const messages = await response.json();
                 const messagesDiv = document.getElementById('mensagens');
-                messagesDiv.innerHTML = '';
+                messagesDiv.innerHTML = ''; 
 
                 messages.forEach(message => {
                     const messageDiv = document.createElement('div');
                     messageDiv.innerHTML = `
                         <p><strong>Nome:</strong> ${message.nome}</p>
-                        <p><strong>Mensagem:</strong> <span id="mensagem-${message.id}" contenteditable="true">${message.mensagem}</span></p>
+                        <p><strong>Mensagem:</strong> ${message.mensagem}</p>
                         <p><strong>Data:</strong> ${message.data}</p>
-                        <button class="botaoeditar" onclick="editMessage(${message.id})">Editar</button>
-                        <button class="botaoexcluir"  onclick="deleteMessage(${message.id})">Excluir</button>
+                        <button onclick="editMessage(${message.id})" 
+                        data-mensagem="${message.mensagem}" 
+                        data-data="${message.data}">Editar</button>
+
+                        <button onclick="deleteMessage(${message.id})">Excluir</button>
                     `;
                     messagesDiv.appendChild(messageDiv);
                 });

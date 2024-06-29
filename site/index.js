@@ -80,6 +80,21 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Obter todas as mensagens
+app.get('/mensagens', (req, res) => {
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        res.json(db.mensagens);
+    });
+});
+
 // Adicionar uma nova mensagem
 app.post('/mensagens', (req, res) => {
     const novaMensagem = req.body;
@@ -104,6 +119,75 @@ app.post('/mensagens', (req, res) => {
             }
 
             res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso.' });
+        });
+    });
+});
+
+// Editar uma mensagem
+app.put('/mensagens/:id', (req, res) => {
+    const messageId = parseInt(req.params.id);
+    const updatedMessage = req.body;
+
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+
+        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
+        if (messageIndex === -1) {
+            res.status(404).send('Mensagem não encontrada.');
+            return;
+        }
+
+        db.mensagens[messageIndex] = { ...db.mensagens[messageIndex], ...updatedMessage };
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+
+            res.status(200).json({ success: true, message: 'Mensagem editada com sucesso.' });
+        });
+    });
+});
+
+// Excluir uma mensagem
+app.delete('/mensagens/:id', (req, res) => {
+    const messageId = parseInt(req.params.id);
+
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+
+        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
+        if (messageIndex === -1) {
+            res.status(404).send('Mensagem não encontrada.');
+            return;
+        }
+
+        db.mensagens.splice(messageIndex, 1);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+
+            res.status(200).json({ success: true, message: 'Mensagem excluída com sucesso!' });
         });
     });
 });
