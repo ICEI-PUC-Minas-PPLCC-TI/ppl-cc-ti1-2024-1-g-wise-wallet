@@ -27,19 +27,19 @@ app.post('/cadastrar', (req, res) => {
 
         const emailExiste = db.usuarios.some(user => user.email === novoUsuario.email);
         if (emailExiste) {
-            res.status(400).send('E-mail já cadastrado.');
+            res.status(400).json({ success: false, message: 'E-mail já cadastrado.' });
             return;
         }
 
         const usuarioExiste = db.usuarios.some(user => user.login === novoUsuario.login);
         if (usuarioExiste) {
-            res.status(400).send('Nome de usuário já cadastrado.');
+            res.status(400).json({ success: false, message: 'Nome de usuário já cadastrado.' });
             return;
         }
 
         const senhaExiste = db.usuarios.some(user => user.senha === novoUsuario.senha);
         if (senhaExiste) {
-            res.status(400).send('Senha já cadastrada.');
+            res.status(400).json({ success: false, message: 'Senha já cadastrada.' });
             return;
         } 
 
@@ -48,36 +48,37 @@ app.post('/cadastrar', (req, res) => {
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
             if (err) {
                 console.error('Erro ao escrever no arquivo:', err);
-                res.status(500).send('Erro ao escrever no arquivo.');
+                res.status(500).json({ success: false, message: 'Erro ao escrever no arquivo.' });
                 return;
             }
 
-            res.status(200).send('Usuário cadastrado com sucesso.');
+            res.status(200).json({ success: true, message: 'Usuário cadastrado com sucesso.' });
         });
     });
 });
 
 // Autenticando login
 app.post('/login', (req, res) => {
-    const {username, password} = req.body;
+    const { username, password } = req.body;
+    console.log('Dados recebidos no login:', username, password); // Log para verificar os dados recebidos
     const dbPath = './assets/db/db.json';
 
     fs.readFile(dbPath, 'utf8', (err, data) => {
-        if(err){
+        if (err) {
             console.error('Erro ao ler o arquivo:', err);
-            res.status(500).json({success: false, message: 'Erro ao ler o arquivo.'});
+            res.status(500).json({ success: false, message: 'Erro ao ler o arquivo.' });
             return;
         }
         const db = JSON.parse(data);
+        console.log('Usuários no banco de dados:', db.usuarios); // Log para verificar os usuários
         const user = db.usuarios.find(user => user.login === username && user.senha === password);
-        if(user){
-            res.status(200).json({success: true});
-        }
-        else{
-            res.status(400).json({success: false, message: 'Usuário ou senha inválidos.'});
+        if (user) {
+            res.status(200).json({ success: true });
+        } else {
+            res.status(400).json({ success: false, message: 'Nome de usuário ou senha incorretos.' });
         }
     });
-})
+});
 
 // Iniciando o servidor
 app.listen(port, () => {
