@@ -704,7 +704,10 @@ footer a:hover{
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
-
+.lll{
+    color: inherit; /* Inherit pega a cor do elemento pai */
+    text-decoration: none; /* Remove o sublinhado */
+}
 
 
 /*SAMUEL - INÍCIO

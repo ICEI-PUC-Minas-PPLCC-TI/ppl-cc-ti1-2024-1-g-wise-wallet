@@ -1,12 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise Wallet ©</title>
-    <link rel="stylesheet" href="/site/estilo/style.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wise Wallet ©</title>
+        <link rel="stylesheet" href="/site/assets/estilos/style.css" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="/site/assets/script/verificar_permissoes.js" defer></script>
+    </head>
+    <body id="gg">
+        <header>
+            <nav>
+                <a href="index.html" class="logolink"
+                    ><img
+                        class="logo"
+                        src="/site/assets/images/logo.png"
+                        alt="Logo wise wallet"
+                /></a>
+                <ul class="menu">
+                    <li><a class="menulogin" href="login.html">Login</a></li>
+                    <li>
+                        <a class="menucadastro" href="cadastro.html"
+                            >Cadastro</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <br />
+        <h2 id="cabeçalho">Cadastro de Categorias</h2>
+        <form id="categoriaForm">
+            <div id="categoriasContainer">
+                <label for="categoria1">Categoria:</label>
+                <input
+                    type="text"
+                    id="categoria1"
+                    name="categoria"
+                /><br /><br />
+            </div>
+            <div id="categoriasValor">
+                <label for="Valor">Valor</label>
+                <input
+                    type="text"
+                    id="valor"
+                    name="valor"
+                /><br /><br />
+            </div>
+            <br />
+            APOS DIGITAR A CATEGORIA ENVIE PARA O SERVIDOR(SALVAMOS SOMENTE UMA
+            CATEGORIA POR VEZ)<br />
+            <button type="button" id="enviarCategorias">
+                Enviar Categorias
+            </button>
+            <button type="button" id="enviarCategorias">
+                <a href="/site/telas/resultunico.html" class="lll">Ir para o Site</a>
+            </button>
+        </form>
+    </body>
 </html>
