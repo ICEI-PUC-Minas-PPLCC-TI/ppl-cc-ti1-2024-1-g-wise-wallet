@@ -2967,3 +2967,7 @@ input:-internal-autofill-selected {
 .wire {
   display:block;
 }
+
+.wire .cadastro{
+  margin-top:3px;
+}
