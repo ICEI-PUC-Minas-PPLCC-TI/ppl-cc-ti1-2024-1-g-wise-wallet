@@ -80,6 +80,34 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Adicionar uma nova mensagem
+app.post('/mensagens', (req, res) => {
+    const novaMensagem = req.body;
+
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+
+        db.mensagens.push(novaMensagem);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).json({ success: false, message: 'Erro ao escrever no arquivo.' });
+                return;
+            }
+
+            res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso.' });
+        });
+    });
+});
+
 // Iniciando o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
