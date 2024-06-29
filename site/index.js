@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('telas'));
 
-// Rota para cadastrar um novo usuário
+// Cadastrar um novo usuário
 app.post('/cadastrar', (req, res) => {
     const novoUsuario = req.body;
 
@@ -57,7 +57,29 @@ app.post('/cadastrar', (req, res) => {
     });
 });
 
-// Iniciar o servidor
+// Autenticando login
+app.post('/login', (req, res) => {
+    const {username, password} = req.body;
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if(err){
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).json({success: false, message: 'Erro ao ler o arquivo.'});
+            return;
+        }
+        const db = JSON.parse(data);
+        const user = db.usuarios.find(user => user.login === username && user.senha === password);
+        if(user){
+            res.status(200).json({success: true});
+        }
+        else{
+            res.status(400).json({success: false, message: 'Usuário ou senha inválidos.'});
+        }
+    });
+})
+
+// Iniciando o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });

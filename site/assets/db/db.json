@@ -27,6 +27,20 @@
       "senha": "123",
       "nome": "Bernardo Alves",
       "email": "bernardoalves222@gmail.com"
+    },
+    {
+      "id": 1719622752995,
+      "login": "mvbsex",
+      "senha": "7890",
+      "nome": "Marcos Vicenzo Borello",
+      "email": "marcosvicenzo8@gmail.com"
+    },
+    {
+      "id": 1719624958951,
+      "login": "gdrvsex",
+      "senha": "diniz007",
+      "nome": "Gabriel Diniz Reis Viana",
+      "email": "gabrielblindfrog@gmail.com"
     }
   ]
 }
