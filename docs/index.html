@@ -381,14 +381,39 @@ Conhecimentos prévios: Possui um bom entendimento de finanças pessoais e busca
                   <tbody>
                       <tr>
                           <th scope="row">RNF-001</th>
-                          <td>O sistema deve ser responsivo para rodar em um dispositivos móvel<span class="exemplo">EXEMPLO</span></td>
-                          <td>MÉDIA</td>
+                          <td> O formulário de cadastro de informações deve ser facilmente utilizável em telas pequenas, como smartphones e tablets, sem perda de funcionalidade.</td>
+                          <td>ALTA</td>
                       </tr>
                       <tr>
                           <th scope="row">RNF-002</th>
-                          <td>Deve processar requisições do usuário em no máximo 3s<span class="exemplo">EXEMPLO</span></td>
-                          <td>BAIXA</td>
+                          <td>As páginas de updates de informações devem se adaptar a diferentes tamanhos de tela para garantir uma boa experiência de usuário em dispositivos móveis.</td>
+                          <td>ALTA</td>
                       </tr>
+                      <tr>
+                        <th scope="row">RNF-003</th>
+                        <td>Ao gerar gráficos de linha do resultado final, o sistema deve apresentar os dados solicitados em até 3 segundos.</td>
+                        <td>MÉDIA</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">RNF-004</th>
+                      <td>Consultar dúvidas frequentes no sistema deve levar no máximo 3 segundos para retornar os resultados.</td>
+                      <td>BAIXA</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">RNF-005</th>
+                    <td> Os gráficos de gastos devem ser capazes de renderizar dados de grandes volumes de forma eficiente.</td>
+                    <td>MÉDIA</td>
+                  </tr>
+                  <tr>
+                  <th scope="row">RNF-006</th>
+                  <td>As páginas de sugestões devem ser exibidas corretamente em todos os navegadores suportados.</td>
+                  <td>MÉDIA</td>
+                </tr>
+                <tr>
+                <th scope="row">RNF-007</th>
+                <td>A página de gráficos de gastos deve estar disponível e funcional em praticamente todos os momentos para os usuários.</td>
+                <td>ALTA</td>
+                </tr>
                   </tbody>
                 </table>
               </section>
@@ -564,7 +589,7 @@ Conhecimentos prévios: Possui um bom entendimento de finanças pessoais e busca
                 <h5>Funcionalidade 1 - Formulário para cadastro de dados</h5>
                 <p>Permite a adição dos gastos para nosso sistema começar a funcionar</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#">--------</a></li>
+                  <li><strong>Estrutura de dados: </strong><a href="">--------</a></li>
                   <li><strong>Instruções de acesso: </strong><ul>
                     <li>Abra o site e efetue o login</li>
                     <li>Acesse o menu principal e escolha a opção Formulário </li>
@@ -602,17 +627,34 @@ Conhecimentos prévios: Possui um bom entendimento de finanças pessoais e busca
               </section>
 
               <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
-                <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+                <h5>Estrutura de Dados - Usuários</h5>
+                <p>Registro dos usuários do sistema utilizados para cadastro, login e para o perfil do sistema</p>
                 <pre>
                   {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
+                    "id": 1719601291904,
+                    "login": "gabrielmayerclary",
+                    "senha": "senhagabriel",
+                    "nome": "Gabriel Mayer Clary",
+                    "email": "gabrielm05.clary@gmail.com"
                   }
+                </pre>
+              </section>
+              <section>
+                <h5>Estrutura de Dados - Fórum</h5>
+                <p>Registro/exclusão de mensagens do fórum de Tira-Dúvidas pelos usuários</p>
+                <pre>
+                  "id": 3,
+                  "nome": "Carlos",
+                  "mensagem": "Estou gostando do fórum.",
+                  "data": "2024-06-11"
+                </pre>
+              </section>
+              <section>
+                <h5>Estrutura de Dados - Dúvidas Frequentes</h5>
+                <p>Apresentação de informações advindas do Json para Dúvidas Frequentes</p>
+                <pre>
+"question": "Como posso definir e acompanhar metas financeiras?",
+"answer": "Instruções sobre como criar metas financeiras, como poupança ou pagamento de dívidas,<br> e acompanhar o progresso dessas metas."
                 </pre>
               </section>
             </section>
