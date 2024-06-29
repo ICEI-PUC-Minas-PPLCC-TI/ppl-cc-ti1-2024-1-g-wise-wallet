@@ -136,16 +136,20 @@ app.put('/mensagens/:id', (req, res) => {
             res.status(500).send('Erro ao ler o arquivo.');
             return;
         }
+        
         const db = JSON.parse(data);
 
-        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
-        if (messageIndex === -1) {
+        // Encontrar a mensagem pelo ID
+        const messageToUpdate = db.mensagens.find(msg => msg.id === messageId);
+        if (!messageToUpdate) {
             res.status(404).send('Mensagem não encontrada.');
             return;
         }
 
-        db.mensagens[messageIndex] = { ...db.mensagens[messageIndex], ...updatedMessage };
+        // Atualizar os campos da mensagem encontrada
+        Object.assign(messageToUpdate, updatedMessage);
 
+        // Escrever de volta no arquivo db.json
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
             if (err) {
                 console.error('Erro ao escrever no arquivo:', err);
@@ -157,6 +161,7 @@ app.put('/mensagens/:id', (req, res) => {
         });
     });
 });
+
 
 // Excluir uma mensagem
 app.delete('/mensagens/:id', (req, res) => {
