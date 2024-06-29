@@ -38,7 +38,7 @@
                         data-mensagem="${message.mensagem}" 
                         data-data="${message.data}">Editar</button>
 
-                        <button onclick="deleteMessage(${message.id})">Excluir</button>
+                        <button class="botaoexcluir"  onclick="deleteMessage(${message.id})">Excluir</button>
                     `;
                     messagesDiv.appendChild(messageDiv);
                 });
