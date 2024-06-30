@@ -290,6 +290,29 @@ app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
     });
 })
 
+// Rota para obter dados do usuário logado
+app.get('/dadosUsuario', verificarAutenticacao, (req, res) => {
+    const userId = req.userId;
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if(err){
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        const user = db.usuarios.find(user => user.id === userId);
+
+        if(!user){
+            res.status(401).json({success: false, message: 'Usuário não encontrado.'});
+            return;
+        }
+
+        res.json({success: true, dados: user.dados});
+    });
+})
+
 // Iniciar o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
