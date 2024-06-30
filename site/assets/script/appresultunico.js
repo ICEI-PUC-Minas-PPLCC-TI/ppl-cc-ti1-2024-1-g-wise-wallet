@@ -1,28 +1,28 @@
-//RECEBENDO OS DADOS DO JSON SERVER
-let gastosjsFix = []
-let gastosjsVar = []
-let valorjsFix = []
-let valorjsVar = []
-async function carregarDados() {
-  const response = await fetch("/site/assets/db/dbmayer.json")
-  const data = await response.json()
-  console.log(data)
-  data.mes1.gastosFix.forEach(categoria => gastosjsFix.push(categoria.categoria))
-  data.mes1.gastosVar.forEach(categoria => gastosjsVar.push(categoria.categoria))
+// Recebendo os dados do JSON Server
+let meses = [];
 
-  data.mes1.gastosFix.forEach(valor => valorjsFix.push(valor.valor))
-  data.mes1.gastosVar.forEach(valor => valorjsVar.push(valor.valor))
-  
-  //CONFIGURANDO GRÁFICOS PARA RECEBER OS DADOS JSON DA PRÓXIMA SPRINT
-  const ctx = document.getElementById('pie-chart1');
+async function carregarDados() {
+  const response = await fetch("/site/assets/db/dbmayer.json");
+  const data = await response.json();
+  console.log(data);
+
+  // Carregar os dados do mês1 (pode ser ajustado conforme a necessidade)
+  meses = data.usuarios[0].dados[0].mes1;
+
+  // Preparar os dados para o gráfico
+  const categorias = meses.map(item => item.categoria);
+  const valores = meses.map(item => parseFloat(item.valor));
+
+  // Configurando o gráfico para receber os dados
+  const ctx = document.getElementById('pie-chart').getContext('2d');
 
   new Chart(ctx, {
     type: 'pie',
     data: {
-      labels: gastosjsFix,
+      labels: categorias,
       datasets: [{
         label: 'R$',
-        data: valorjsFix,
+        data: valores,
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
@@ -32,32 +32,7 @@ async function carregarDados() {
       }]
     }
   });
-
-
-  const ctx2 = document.getElementById('pie-chart2');
-
-  new Chart(ctx2, {
-    type: 'pie',
-    data: {
-      labels: gastosjsFix,
-      datasets: [{
-        label: 'R$',
-        data: valorjsVar,
-        backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ],
-        hoverOffset: 4
-      }]
-    }
-  });
-
 }
 
-  
-
-//TESTES
+// Carregar os dados ao carregar a página
 window.onload = carregarDados;
-console.log(gastosjsFix)
-console.log(gastosjsVar)
