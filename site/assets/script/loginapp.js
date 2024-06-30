@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(({ status, body }) => {
                 console.log('Resposta do servidor:', status, body); // Log para verificar a resposta
                 if(status === 200 && body.success){
+                    localStorage.setItem('authToken', body.token);
                     alert('Login efetuado com sucesso!');
                     window.location.href = 'dashboard.html'; // Redireciona para o dashboard após login bem-sucedido
                 }

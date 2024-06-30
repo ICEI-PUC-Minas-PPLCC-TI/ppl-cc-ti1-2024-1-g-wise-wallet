@@ -2,35 +2,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
+const { userInfo } = require('os');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = 3000;
+const SECRET_KEY = "meuSegredo";
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('telas'));
 
-// Função para verificar se o usuário está autenticado
-function verificarAutenticacao(req, res, next) {
-    const token = req.headers.authorization;
-
-    if (!token) {
-        return res.status(401).json({ success: false, message: 'Token de autenticação não fornecido.' });
-    }
-
-    // Simulação simples de verificação de token
-    if (token !== 'meuTokenDeAutenticacao') {
-        return res.status(401).json({ success: false, message: 'Token inválido.' });
-    }
-
-    next();
-}
-
 // Rota para cadastrar um novo usuário
 app.post('/cadastrar', (req, res) => {
     const novoUsuario = req.body;
-
     const dbPath = './assets/db/db.json';
 
     fs.readFile(dbPath, 'utf8', (err, data) => {
@@ -75,10 +61,9 @@ app.post('/cadastrar', (req, res) => {
     });
 });
 
-// Rota para autenticar login
+// Rota para autenticar login e gerar token
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-
     const dbPath = './assets/db/db.json';
 
     fs.readFile(dbPath, 'utf8', (err, data) => {
@@ -87,11 +72,12 @@ app.post('/login', (req, res) => {
             res.status(500).json({ success: false, message: 'Erro ao ler o arquivo.' });
             return;
         }
+        
         const db = JSON.parse(data);
-
         const user = db.usuarios.find(user => user.login === username && user.senha === password);
+
         if (user) {
-            const token = 'meuTokenDeAutenticacao'; // Gerando um token simples para simular autenticação
+            const token = jwt.sign({id: user.id}, SECRET_KEY, {expiresIn: '1h'})
             res.status(200).json({ success: true, token: token });
         } else {
             res.status(400).json({ success: false, message: 'Nome de usuário ou senha incorretos.' });
@@ -250,6 +236,58 @@ app.post('/alterar_senha', verificarAutenticacao, (req, res) => {
         });
     });
 });
+
+// Função para verificar se o usuário está autenticado
+function verificarAutenticacao(req, res, next) {
+    const token = req.headers.authorization;
+
+    if (!token) {
+        return res.status(401).json({ success: false, message: 'Token de autenticação não fornecido.' });
+    }
+
+    jwt.verify(token, SECRET_KEY, (err, decoded) => {
+        if (err) {
+            return res.status(401).json({ success: false, message: 'Token inválido.' });
+        }
+
+        req.userId = decoded.id; 
+        next();
+    });
+}
+
+// Rota para adicionar categoria
+app.post('/adicionarCategoria', verificarAutenticacao, (req, res) => {
+    const novaCategoria = req.body;
+    const userId = req.userId;
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        const user = db.usuarios.find(user => user.id === userId);
+        if (!user) {
+            res.status(401).json({ success: false, message: 'Usuário não encontrado.' });
+            return;
+        }
+
+        user.dados.push(novaCategoria);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).json({ success: false, message: 'Erro ao escrever no arquivo.' });
+                return;
+            }
+
+            res.status(200).json({ success: true, message: 'Categoria adicionada com sucesso.' });
+        });
+    });
+})
+
 
 // Iniciar o servidor
 app.listen(port, () => {

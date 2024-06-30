@@ -6,7 +6,16 @@
       "senha": "senhagabriel",
       "nome": "Gabriel Mayer Clary",
       "email": "gabrielm05.clary@gmail.com",
-      "dados": []
+      "dados": [
+        {
+          "categoria": "Agua",
+          "valor": 300
+        },
+        {
+          "categoria": "Lixo",
+          "valor": 50
+        }
+      ]
     },
     {
       "id": 1719601330954,
@@ -14,7 +23,12 @@
       "senha": "senhajulio",
       "nome": "Julio Thurow Buzzi",
       "email": "juliocesar.thurowbuzzi@gmail.com",
-      "dados": []
+      "dados": [
+        {
+          "categoria": "Minas",
+          "valor": 350
+        }
+      ]
     },
     {
       "id": 1719601886093,
