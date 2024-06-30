@@ -8,12 +8,28 @@
       "email": "gabrielm05.clary@gmail.com",
       "dados": [
         {
-          "categoria": "Agua",
-          "valor": 300
+          "mes1": [
+            {
+              "categoria": "Agua",
+              "valor": 300
+            },
+            {
+              "categoria": "Luz",
+              "valor": 35
+            }
+          ]
         },
         {
-          "categoria": "Lixo",
-          "valor": 50
+          "mes2": [
+            {
+              "categoria": "Agua",
+              "valor": 76
+            },
+            {
+              "categoria": "Luz",
+              "valor": 37281
+            }
+          ]
         }
       ]
     },
@@ -23,12 +39,7 @@
       "senha": "senhajulio",
       "nome": "Julio Thurow Buzzi",
       "email": "juliocesar.thurowbuzzi@gmail.com",
-      "dados": [
-        {
-          "categoria": "Minas",
-          "valor": 350
-        }
-      ]
+      "dados": []
     },
     {
       "id": 1719601886093,

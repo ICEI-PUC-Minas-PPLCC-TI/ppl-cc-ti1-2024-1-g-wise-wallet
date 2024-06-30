@@ -255,39 +255,39 @@ function verificarAutenticacao(req, res, next) {
     });
 }
 
-// Rota para adicionar categoria
-app.post('/adicionarCategoria', verificarAutenticacao, (req, res) => {
-    const novaCategoria = req.body;
+// Rota para finalizar o registro de categorias
+app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
+    const { mes } = req.body;
     const userId = req.userId;
     const dbPath = './assets/db/db.json';
-
+    
     fs.readFile(dbPath, 'utf8', (err, data) => {
-        if (err) {
+        if(err){
             console.error('Erro ao ler o arquivo:', err);
             res.status(500).send('Erro ao ler o arquivo.');
             return;
         }
         const db = JSON.parse(data);
         const user = db.usuarios.find(user => user.id === userId);
-        if (!user) {
-            res.status(401).json({ success: false, message: 'Usuário não encontrado.' });
+
+        if(!user){
+            res.status(401).json({success: false, message: 'Usuário não encontrado.'});
             return;
         }
-
-        user.dados.push(novaCategoria);
+        const mesIndex = user.dados.length + 1;
+        user.dados.push({[`mes${mesIndex}`]: mes});
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
-            if (err) {
+            if(err){
                 console.error('Erro ao escrever no arquivo:', err);
-                res.status(500).json({ success: false, message: 'Erro ao escrever no arquivo.' });
+                res.status(500).json({success: false, message: 'Erro ao escrever no arquivo.'});
                 return;
             }
 
-            res.status(200).json({ success: true, message: 'Categoria adicionada com sucesso.' });
-        });
+            res.status(200).json({success: true, message: 'Registro finalizado com sucesso.'});
+        })
     });
 })
-
 
 // Iniciar o servidor
 app.listen(port, () => {

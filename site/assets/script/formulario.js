@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('categoriaForm');
     const send = document.getElementById('enviarCategorias');
+    const finalize = document.getElementById('finalizarRegistro');
+
+    let categorias = [];
 
     send.addEventListener('click', function (){
         const categoria = document.getElementById('categoria1').value;
@@ -16,21 +19,38 @@ document.addEventListener("DOMContentLoaded", function () {
             valor: parseFloat(valor)
         };
 
-        const token = localStorage.getItem('authToken');
+        categorias.push(dadosCategoria);
 
-        fetch('http://localhost:3000/adicionarCategoria', {
+        alert('Categoria adicionada com sucesso! Adicione outra categoria ou finalize o registro.');
+        form.reset();
+    });
+        
+    finalize.addEventListener('click', function (){
+        if(categorias.length === 0){
+            alert('Nenhuma categoria adicionada');
+            return;
+        }
+
+        const token = localStorage.getItem('authToken');
+        const dados = {
+            mes: categorias
+        }
+
+        fetch('http://localhost:3000/finalizarRegistro', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': token
             },
-            body: JSON.stringify(dadosCategoria)
+            body: JSON.stringify(dados)
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Categoria adicionada com sucesso!');
+                alert('Gastos do mês registrados com sucesso!');
+                categorias = [];
                 form.reset();
+                window.location.href = 'resultunico.html';
             } else {
                 alert('Erro ao adicionar categoria: ' + data.message);
             }
