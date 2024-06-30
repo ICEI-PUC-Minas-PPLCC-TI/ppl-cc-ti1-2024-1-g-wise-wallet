@@ -11,42 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
         const newPassword = newPasswordInput.value;
         const confirmNewPassword = confirmNewPasswordInput.value;
 
-        // ID do usuário logado hardcoded
-        const userId = 1;
-        const apiUrl = `./assets/db/db.json/usuarios/${userId}`;
+        if (newPassword !== confirmNewPassword) {
+            alert("A nova senha e a confirmação não coincidem!");
+            return;
+        }
+
+        const apiUrl = 'http://localhost:3000/alterar_senha';
 
         try {
-            // Obter dados do usuário atual
-            const response = await fetch(apiUrl);
-            const userData = await response.json();
-
-            if (userData.senha !== currentPassword) {
-                alert("Senha atual incorreta!");
-                return;
-            }
-
-            if (newPassword !== confirmNewPassword) {
-                alert("A nova senha e a confirmação não coincidem!");
-                return;
-            }
-
-            // Atualizar a senha do usuário
-            const updateResponse = await fetch(apiUrl, {
-                method: "PUT",
+            const response = await fetch(apiUrl, {
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    ...userData,
-                    senha: newPassword
+                    currentPassword,
+                    newPassword
                 })
             });
 
-            if (updateResponse.ok) {
-                alert("Senha alterada com sucesso!");
+            const result = await response.json();
+
+            if (response.ok) {
+                alert(result.message);
                 form.reset();
             } else {
-                alert("Erro ao alterar a senha.");
+                alert(result.message || "Erro ao alterar a senha.");
             }
         } catch (error) {
             console.error("Erro ao atualizar a senha:", error);
