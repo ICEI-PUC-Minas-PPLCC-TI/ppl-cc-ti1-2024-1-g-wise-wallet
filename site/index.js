@@ -197,6 +197,43 @@ app.delete('/mensagens/:id', (req, res) => {
     });
 });
 
+// Trocar a senha
+app.post('/alterar_senha', (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+
+    const dbPath = './assets/db/db.json';
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        
+        const db = JSON.parse(data);
+        const userIndex = db.usuarios.findIndex(user => user.senha === currentPassword);
+
+        if (userIndex === -1) {
+            res.status(400).json({ success: false, message: 'Senha atual incorreta.' });
+            return;
+        }
+
+        db.usuarios[userIndex].senha = newPassword;
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+
+            res.status(200).json({ success: true, message: 'Senha alterada com sucesso.' });
+        });
+    });
+});
+
+
+
 // Iniciando o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
