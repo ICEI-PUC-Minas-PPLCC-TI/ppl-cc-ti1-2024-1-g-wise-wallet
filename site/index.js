@@ -11,7 +11,23 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('telas'));
 
-// Cadastrar um novo usuário
+// Função para verificar se o usuário está autenticado
+function verificarAutenticacao(req, res, next) {
+    const token = req.headers.authorization;
+
+    if (!token) {
+        return res.status(401).json({ success: false, message: 'Token de autenticação não fornecido.' });
+    }
+
+    // Simulação simples de verificação de token
+    if (token !== 'meuTokenDeAutenticacao') {
+        return res.status(401).json({ success: false, message: 'Token inválido.' });
+    }
+
+    next();
+}
+
+// Rota para cadastrar um novo usuário
 app.post('/cadastrar', (req, res) => {
     const novoUsuario = req.body;
 
@@ -41,8 +57,9 @@ app.post('/cadastrar', (req, res) => {
         if (senhaExiste) {
             res.status(400).json({ success: false, message: 'Senha já cadastrada.' });
             return;
-        } 
+        }
 
+        novoUsuario.id = Date.now(); // Gerando um ID simples para o novo usuário
         db.usuarios.push(novoUsuario);
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
@@ -57,10 +74,10 @@ app.post('/cadastrar', (req, res) => {
     });
 });
 
-// Autenticando login
+// Rota para autenticar login
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    console.log('Dados recebidos no login:', username, password); // Log para verificar os dados recebidos
+
     const dbPath = './assets/db/db.json';
 
     fs.readFile(dbPath, 'utf8', (err, data) => {
@@ -70,17 +87,18 @@ app.post('/login', (req, res) => {
             return;
         }
         const db = JSON.parse(data);
-        console.log('Usuários no banco de dados:', db.usuarios); // Log para verificar os usuários
+
         const user = db.usuarios.find(user => user.login === username && user.senha === password);
         if (user) {
-            res.status(200).json({ success: true });
+            const token = 'meuTokenDeAutenticacao'; // Gerando um token simples para simular autenticação
+            res.status(200).json({ success: true, token: token });
         } else {
             res.status(400).json({ success: false, message: 'Nome de usuário ou senha incorretos.' });
         }
     });
 });
 
-// Obter todas as mensagens
+// Rota para obter todas as mensagens
 app.get('/mensagens', (req, res) => {
     const dbPath = './assets/db/db.json';
 
@@ -95,8 +113,8 @@ app.get('/mensagens', (req, res) => {
     });
 });
 
-// Adicionar uma nova mensagem
-app.post('/mensagens', (req, res) => {
+// Rota para adicionar uma nova mensagem
+app.post('/mensagens', verificarAutenticacao, (req, res) => {
     const novaMensagem = req.body;
 
     const dbPath = './assets/db/db.json';
@@ -109,6 +127,7 @@ app.post('/mensagens', (req, res) => {
         }
         const db = JSON.parse(data);
 
+        novaMensagem.id = Date.now(); // Gerando um ID simples para a nova mensagem
         db.mensagens.push(novaMensagem);
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
@@ -123,8 +142,8 @@ app.post('/mensagens', (req, res) => {
     });
 });
 
-// Editar uma mensagem
-app.put('/mensagens/:id', (req, res) => {
+// Rota para editar uma mensagem
+app.put('/mensagens/:id', verificarAutenticacao, (req, res) => {
     const messageId = parseInt(req.params.id);
     const updatedMessage = req.body;
 
@@ -162,9 +181,8 @@ app.put('/mensagens/:id', (req, res) => {
     });
 });
 
-
-// Excluir uma mensagem
-app.delete('/mensagens/:id', (req, res) => {
+// Rota para excluir uma mensagem
+app.delete('/mensagens/:id', verificarAutenticacao, (req, res) => {
     const messageId = parseInt(req.params.id);
 
     const dbPath = './assets/db/db.json';
@@ -197,8 +215,8 @@ app.delete('/mensagens/:id', (req, res) => {
     });
 });
 
-// Trocar a senha
-app.post('/alterar_senha', (req, res) => {
+// Rota para trocar a senha
+app.post('/alterar_senha', verificarAutenticacao, (req, res) => {
     const { currentPassword, newPassword } = req.body;
 
     const dbPath = './assets/db/db.json';
@@ -232,9 +250,7 @@ app.post('/alterar_senha', (req, res) => {
     });
 });
 
-
-
-// Iniciando o servidor
+// Iniciar o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
