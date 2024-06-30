@@ -5,63 +5,88 @@
       "login": "gabrielmayerclary",
       "senha": "senhagabriel",
       "nome": "Gabriel Mayer Clary",
-      "email": "gabrielm05.clary@gmail.com"
+      "email": "gabrielm05.clary@gmail.com",
+      "dados": []
     },
     {
       "id": 1719601330954,
       "login": "buzzijulio",
       "senha": "senhajulio",
       "nome": "Julio Thurow Buzzi",
-      "email": "juliocesar.thurowbuzzi@gmail.com"
+      "email": "juliocesar.thurowbuzzi@gmail.com",
+      "dados": []
     },
     {
       "id": 1719601886093,
       "login": "nodemon",
       "senha": "nodemon1",
       "nome": "Nodemon Test",
-      "email": "nodemon@js.com"
+      "email": "nodemon@js.com",
+      "dados": []
     },
     {
       "id": 1719602354344,
       "login": "bezin031",
       "senha": "123",
       "nome": "Bernardo Alves",
-      "email": "bernardoalves222@gmail.com"
+      "email": "bernardoalves222@gmail.com",
+      "dados": []
     },
     {
       "id": 1719622752995,
       "login": "mvbsex",
       "senha": "7890",
       "nome": "Marcos Vicenzo Borello",
-      "email": "marcosvicenzo8@gmail.com"
+      "email": "marcosvicenzo8@gmail.com",
+      "dados": []
     },
     {
       "id": 1719624958951,
       "login": "gdrvsex",
       "senha": "diniz007",
       "nome": "Gabriel Diniz Reis Viana",
-      "email": "gabrielblindfrog@gmail.com"
+      "email": "gabrielblindfrog@gmail.com",
+      "dados": []
     },
     {
       "id": 1719676863563,
       "login": "sofai19",
       "senha": "1234",
       "nome": "Sofia Regina",
-      "email": "sofia19@gmail.com"
+      "email": "sofia19@gmail.com",
+      "dados": []
     },
     {
       "id": 1719682974549,
       "login": "sabrina15",
       "senha": "676",
       "nome": "sabrina regina",
-      "email": "sabrina@gmail.com"
+      "email": "sabrina@gmail.com",
+      "dados": []
     },
     {
       "id": 1719691380787,
       "login": "juliobuzzi",
       "senha": "675",
       "nome": "Julio Cesar Thurow Buzzi",
-      "email": "julioctbuzzi@gmail.com"
+      "email": "julioctbuzzi@gmail.com",
+      "dados": []
+    },
+    {
+      "id": 1719758752596,
+      "login": "caralhogames",
+      "senha": "caralhinho",
+      "nome": "Matheus Carvalho",
+      "email": "caralhao@outlook.com",
+      "dados": []
+    },
+    {
+      "id": 1719760132340,
+      "login": "datatest",
+      "senha": "datas05",
+      "nome": "Teste Dados",
+      "email": "datatest@gmail.com",
+      "dados": []
     }
   ],
   "mensagens": [

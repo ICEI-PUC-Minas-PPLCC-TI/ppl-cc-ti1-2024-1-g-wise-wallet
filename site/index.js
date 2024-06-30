@@ -60,6 +60,7 @@ app.post('/cadastrar', (req, res) => {
         }
 
         novoUsuario.id = Date.now(); // Gerando um ID simples para o novo usuário
+        novoUsuario.dados = [];
         db.usuarios.push(novoUsuario);
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
