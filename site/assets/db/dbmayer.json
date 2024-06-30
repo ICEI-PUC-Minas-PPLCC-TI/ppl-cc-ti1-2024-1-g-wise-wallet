@@ -1,70 +1,52 @@
 {
-  "usuarios":[
+  "dados": [
     {
-      "dados": [
-        {
       "mes1": [
-      {
-        "categoria": "Base",
-        "valor": "1731"
-       
-      },
-      {
-        "categoria": "Teste",
-        "valor": "1284"
-       
-      },
-      {
-        "categoria": "Exemplo",
-        "valor": "956"  
-      }
-    ],
-    "mes2": [ 
-      {
-        "categoria": "Base",
-        "valor": "1789"
-       
-      },
-      {
-        "categoria": "Teste",
-        "valor": "831"
-        
-      },
-      {
-        "categoria": "Exemplo",
-        "valor": "1472"
-        
-      }
-    ],
-    "mes3": [
-    
-      {
-        "categoria": "Base",
-        "valor": "1045"
-        
-      },
-      {
-        "categoria": "Teste",
-        "valor": "1622"
-       
-      },
-      {
-        "categoria": "Exemplo",
-        "valor": "887"
-      }
-   ]
-  }
- ]
+        {
+          "categoria": "Base",
+          "valor": "1731"
+        },
+        {
+          "categoria": "Teste",
+          "valor": "1284"
+        },
+        {
+          "categoria": "Exemplo",
+          "valor": "956"
+        }
+      ]
+    },
+    {
+      "mes2": [
+        {
+          "categoria": "Base",
+          "valor": "1789"
+        },
+        {
+          "categoria": "Teste",
+          "valor": "831"
+        },
+        {
+          "categoria": "Exemplo",
+          "valor": "1472"
+        }
+      ]
+    },
+    {
+      "mes3": [
+        {
+          "categoria": "Base",
+          "valor": "1045"
+        },
+        {
+          "categoria": "Teste",
+          "valor": "1622"
+        },
+        {
+          "categoria": "Exemplo",
+          "valor": "887"
+        }
+      ]
+    }
+  ]
 }
-]
-}
-  
-
-
-
-
-
-
-  
-
-

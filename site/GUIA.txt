@@ -10,3 +10,8 @@ Para testar o funcionamento do site fazer o seguinte passo a passo:
 OU
 -> Abra o navegador e acesse 'http://localhost:3000'.
 -> Se tudo correr bem, o site deverá estar funcional :)
+
+LEMBRETES AO USUÁRIO: 
+->Se estiver rodando os arquivos via LiveServer, toda vez que for finalizar um registro de gastos do mês, reinicie o Live
+  Server para o redirecionamento correto no 3º mês. Dessa forma será simulado o ato de fechar e abrir a aba numa ocasião
+  convencional.

@@ -7,7 +7,7 @@ async function carregarDados() {
   console.log(data);
 
   // Carregar os dados do mês1 (pode ser ajustado conforme a necessidade)
-  meses = data.usuarios[0].dados[0].mes1;
+  meses = data.dados[0].mes1;
 
   // Preparar os dados para o gráfico
   const categorias = meses.map(item => item.categoria);
