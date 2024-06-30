@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/site/assets/estilos/config.css">
     <title>Wise Wallet ©</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="/site/assets/script/julio.js" defer></script>
+    <script src="/site/assets/script/editarperf.js" defer></script>
 </head>
-
 <body>
-
 <header>
     <nav>
         <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
         <ul class="menu">
-            
             <li><a class="menuconfig" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
         </ul>
     </nav>
@@ -24,7 +20,7 @@
 <main>
     <section class="profile-edit">
         <h2>Editar Perfil</h2>
-        <form action="atualizar_perfil.html" method="POST" enctype="multipart/form-data">
+        <form id="profile-form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="profile-pic">Alterar Foto:</label>
                 <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
@@ -41,22 +37,10 @@
                 <label for="name">Alterar Nome:</label>
                 <input type="text" id="name" name="name">
             </div>
+            <input type="hidden" id="user-id" name="user-id" value="1719601291904"> <!-- Replace with actual user ID -->
             <button type="button" class="update-button">Salvar Alterações</button>
         </form>
     </section>
 </main>
-<script src="../assets/script/editarperf.js"></script>
-<!-- Adicione este script em todas as páginas protegidas -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            alert('Você precisa estar logado para acessar esta página.');
-            window.location.href = 'login.html';
-        }
-    });
-</script>
-
 </body>
-
 </html>
