@@ -197,7 +197,7 @@ app.delete('/mensagens/:id', verificarAutenticacao, (req, res) => {
                 return;
             }
 
-            res.status(200).json({ success: true, message: 'Mensagem excluída com sucesso!' });
+            res.status(200).json({ success: true, message: 'Mensagem excluída com sucesso!'});
         });
     });
 });
@@ -275,6 +275,7 @@ app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
             return;
         }
         const mesIndex = user.dados.length + 1;
+        console.log(mesIndex)
         user.dados.push({[`mes${mesIndex}`]: mes});
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
@@ -284,7 +285,7 @@ app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
                 return;
             }
 
-            res.status(200).json({success: true, message: 'Registro finalizado com sucesso.'});
+            res.status(200).json({success: true, message: 'Registro finalizado com sucesso.', registroContagem: mesIndex});
         })
     });
 })

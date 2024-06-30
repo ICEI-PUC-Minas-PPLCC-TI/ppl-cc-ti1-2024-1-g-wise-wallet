@@ -47,10 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Gastos do mês registrados com sucesso!');
+                console.log(data.registroContagem)
+                if(data.registroContagem % 3 === 0){
+                    window.location.href = 'resultfinal.html';
+                }
+                else{
+                    window.location.href = 'resultunico.html';
+                }
                 categorias = [];
                 form.reset();
-                window.location.href = 'resultunico.html';
             } else {
                 alert('Erro ao adicionar categoria: ' + data.message);
             }

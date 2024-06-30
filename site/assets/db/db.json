@@ -15,7 +15,7 @@
             },
             {
               "categoria": "Luz",
-              "valor": 35
+              "valor": 250
             }
           ]
         },
@@ -23,11 +23,95 @@
           "mes2": [
             {
               "categoria": "Agua",
-              "valor": 76
+              "valor": 250
             },
             {
               "categoria": "Luz",
-              "valor": 37281
+              "valor": 200
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Agua",
+              "valor": 200
+            },
+            {
+              "categoria": "Luz",
+              "valor": 150
+            }
+          ]
+        },
+        {
+          "mes4": [
+            {
+              "categoria": "Agua",
+              "valor": 150
+            },
+            {
+              "categoria": "Luz",
+              "valor": 100
+            }
+          ]
+        },
+        {
+          "mes5": [
+            {
+              "categoria": "Agua",
+              "valor": 100
+            },
+            {
+              "categoria": "Luz",
+              "valor": 50
+            }
+          ]
+        },
+        {
+          "mes6": [
+            {
+              "categoria": "Agua",
+              "valor": 50
+            },
+            {
+              "categoria": "Luz",
+              "valor": 0
+            }
+          ]
+        },
+        {
+          "mes7": [
+            {
+              "categoria": "Agua",
+              "valor": 500
+            },
+            {
+              "categoria": "Luz",
+              "valor": 450
+            }
+          ]
+        },
+        {
+          "mes8": [
+            {
+              "categoria": "Agua",
+              "valor": 450
+            },
+            {
+              "categoria": "Luz",
+              "valor": 400
+            }
+          ]
+        },
+        {
+          "mes9": [
+            {
+              "categoria": "Agua",
+              "valor": 400
+            },
+            {
+              "categoria": "Luz",
+              "valor": 350
             }
           ]
         }
@@ -39,7 +123,44 @@
       "senha": "senhajulio",
       "nome": "Julio Thurow Buzzi",
       "email": "juliocesar.thurowbuzzi@gmail.com",
-      "dados": []
+      "dados": [
+        {
+          "mes1": [
+            {
+              "categoria": "Agua",
+              "valor": 900
+            },
+            {
+              "categoria": "Luz",
+              "valor": 850
+            }
+          ]
+        },
+        {
+          "mes2": [
+            {
+              "categoria": "Agua",
+              "valor": 850
+            },
+            {
+              "categoria": "Luz",
+              "valor": 800
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Agua",
+              "valor": 800
+            },
+            {
+              "categoria": "Luz",
+              "valor": 750
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 1719601886093,
