@@ -1,181 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>Wise Wallet ©</title>
-    <link rel="stylesheet" href="/site/assets/estilos/style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-</head>
-<body id="gg">
-    <header>
-        <nav>
-            <a href="index.html"><img class="logo" src="/site/assets/images/logo.png" alt="Logo wise wallet"></a>
-            <ul class="menu">
-                <li class="menu"><a class="menu" href="config.html"><i class="ph ph-user-circle-gear"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-<br><h2 id="cabeçalho">Formulário de Gastos</h1>
-
-    <form action="#" method="POST" id="formulario">
-        <label for="gastosFixos">Gastos Fixos:</label>
-        <select id="gastosFixos" name="gastosFixos[]" multiple>
-            <option value="aluguel">Aluguel</option>
-    <option value="condominio">Condomínio</option>
-    <option value="agua">Água</option>
-    <option value="luz">Luz</option>
-    <option value="internet">Internet</option>
-    <option value="telefone">Telefone</option>
-    <option value="alimentacao">Alimentação</option>
-    <option value="transporte">Transporte</option>
-    <option value="educacao">Educação</option>
-    <option value="saude">Saúde</option>
-    <option value="entretenimento">Entretenimento</option>
-    <option value="vestuario">Vestuário</option>
-        </select>
-        <div id="gastosFixosDetails"></div><br><br>
-
-        <button type="button" id="adicionarCampoGastosFixos">Adicionar Campo Gastos Fixos</button><br><br>
-
-
-        <label for="gastosVariaveis">Gastos Variáveis:</label>
-        <select id="gastosVariaveis" name="gastosVariaveis[]" multiple>
-            <option value="supermercado">Supermercado</option>
-    <option value="transporte">Transporte</option>
-    <option value="lazer">Lazer</option>
-    <option value="vestuario">Vestuário</option>
-    <option value="educacao">Educação</option>
-    <option value="saude">Saúde</option>
-    <option value="entretenimento">Entretenimento</option>
-    <option value="telecomunicacoes">Telecomunicações</option>
-        </select>
-        <div id="gastosVariaveisDetails"></div><br><br>
-
-        <button type="button" id="adicionarCampoGastosVariaveis">Adicionar Campo Gastos Variáveis</button><br><br>
-
-        <label for="outrosGastos">Outros Gastos:</label>
-        <select id="outrosGastos" name="outrosGastos[]" multiple>
-            <option value="alimentacao">Alimentação</option>
-    <option value="saude">Saúde</option>
-    <option value="educacao">Educação</option>
-    <option value="entretenimento">Entretenimento</option>
-    <option value="transporte">Transporte</option>
-    <option value="vestuario">Vestuário</option>
-    <option value="telecomunicacoes">Telecomunicações</option>
-    <option value="beleza">Beleza</option>
-    <option value="viagens">Viagens</option>
-        </select>
-        <div id="outrosGastosDetails"></div><br><br>
-
-        <button type="button" id="adicionarCampoOutrosGastos">Adicionar Campo Outros Gastos</button><br><br><br>
-
-        <label for="cartaoCredito">Se desejar, nos informe o limite do seu cartão de crédito</label>
-        <input type="number" id="cartaoCredito" name="cartaoCredito" required><br><br>
-        <label for="cartaoFatura">Se desejar, nos informe o valor a ser pago na fatura</label>
-        <input type="number" id="cartaoFatura" name="cartaoFatura" required><br><br>
-
-        <input type="submit" id="btnEnv"value="Enviar">
-    </form>
-
-    <script>
-        <!-- Script para adicionar campos de detalhes dos gastos -->
-        document.getElementById('gastosFixos').addEventListener('change', function() {
-            const selected = this.value;
-            document.getElementById('gastosFixosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosFixosDetails" placeholder="Valor do Gasto Fixo">' : '';
-        });
-
-        document.getElementById('gastosVariaveis').addEventListener('change', function() {
-            const selected = this.value;
-            document.getElementById('gastosVariaveisDetails').innerHTML = selected.length > 0 ? '<input type="text" name="gastosVariaveisDetails" placeholder="Valor do Gasto Variável">' : '';
-        });
-
-        document.getElementById('outrosGastos').addEventListener('change', function() {
-            const selected = this.value;
-            document.getElementById('outrosGastosDetails').innerHTML = selected.length > 0 ? '<input type="text" name="outrosGastosDetails" placeholder="Valor de Outros Gastos">' : '';
-        });
-        
-        document.getElementById('adicionarCampoGastosFixos').addEventListener('click', function() {
-            const form = document.getElementById('formulario');
-            const div = document.createElement('div');
-            const select = document.createElement('select');
-            select.setAttribute('name', 'gastosFixos[]');
-            select.setAttribute('multiple', '');
-            select.innerHTML = `
-            <option value="aluguel">Aluguel</option>
-            <option value="agua">Água</option>
-            <option value="luz">Luz</option>
-            <option value="internet">Internet</option>
-            <option value="telefone">Telefone</option>
-            <option value="alimentacao">Alimentação</option>
-            <option value="transporte">Transporte</option>
-            <option value="educacao">Educação</option>
-            <option value="saude">Saúde</option>
-            <option value="entretenimento">Entretenimento</option>
-            <option value="vestuario">Vestuário</option>
-            <option value="condominio">Condomínio</option>
-            `;
-            div.appendChild(select);
-            const input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            input.setAttribute('name', 'gastosFixosDetails[]');
-            input.setAttribute('placeholder', 'Valor do Gasto Fixo');
-            div.appendChild(input);
-            form.insertBefore(div, this.nextSibling);
-        });
-
-        document.getElementById('adicionarCampoGastosVariaveis').addEventListener('click', function() {
-            const form = document.getElementById('formulario');
-            const div = document.createElement('div');
-            const select = document.createElement('select');
-            select.setAttribute('name', 'gastosVariaveis[]');
-            select.setAttribute('multiple', '');
-            select.innerHTML = `
-            <option value="transporte">Transporte</option>
-            <option value="lazer">Lazer</option>
-            <option value="vestuario">Vestuário</option>
-            <option value="educacao">Educação</option>
-            <option value="saude">Saúde</option>
-            <option value="entretenimento">Entretenimento</option>
-            <option value="telecomunicacoes">Telecomunicações</option>
-            <option value="supermercado">Supermercado</option>
-            `;
-            div.appendChild(select);
-            const input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            input.setAttribute('name', 'gastosVariaveisDetails[]');
-            input.setAttribute('placeholder', 'Valor do Gasto Variável');
-            div.appendChild(input);
-            form.insertBefore(div, this.nextSibling);
-        });
-
-        document.getElementById('adicionarCampoOutrosGastos').addEventListener('click', function() {
-            const form = document.getElementById('formulario');
-            const div = document.createElement('div');
-            const select = document.createElement('select');
-            select.setAttribute('name', 'outrosGastos[]');
-            select.setAttribute('multiple', '');
-            select.innerHTML = `
-            <option value="alimentacao">Alimentação</option>
-            <option value="educacao">Educação</option>
-            <option value="entretenimento">Entretenimento</option>
-            <option value="transporte">Transporte</option>
-            <option value="vestuario">Vestuário</option>
-            <option value="telecomunicacoes">Telecomunicações</option>
-            <option value="beleza">Beleza</option>
-            <option value="viagens">Viagens</option>
-            <option value="saude">Saúde</option>
-            `;
-            div.appendChild(select);
-            const input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            input.setAttribute('name', 'outrosGastosDetails[]');
-            input.setAttribute('placeholder', 'Valor dos Outros Gastos');
-            div.appendChild(input);
-            form.insertBefore(div, this.nextSibling);
-        });
-        
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wise Wallet ©</title>
+        <link rel="stylesheet" href="/site/assets/estilos/style.css" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="/site/assets/script/verificar_permissoes.js" defer></script>
+    </head>
+    <body id="gg">
+        <header>
+            <nav>
+                <a href="index.html" class="logolink"
+                    ><img
+                        class="logo"
+                        src="/site/assets/images/logo.png"
+                        alt="Logo wise wallet"
+                /></a>
+                <ul class="menu">
+                    <li><a class="menulogin" href="login.html">Login</a></li>
+                    <li>
+                        <a class="menucadastro" href="cadastro.html"
+                            >Cadastro</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <br />
+        <h2 id="cabeçalho">Cadastro de Categorias</h2>
+        <form id="categoriaForm">
+            <div id="categoriasContainer">
+                <label for="categoria1">Categoria:</label>
+                <input
+                    type="text"
+                    id="categoria1"
+                    name="categoria"
+                /><br /><br />
+            </div>
+            <div id="categoriasValor">
+                <label for="Valor">Valor</label>
+                <input
+                    type="text"
+                    id="valor"
+                    name="valor"
+                /><br /><br />
+            </div>
+            <br />
+            APOS DIGITAR A CATEGORIA ENVIE PARA O SERVIDOR(SALVAMOS SOMENTE UMA
+            CATEGORIA POR VEZ)<br />
+            <button type="button" id="enviarCategorias">
+                Enviar Categorias
+            </button>
+            <button type="button" id="enviarCategorias">
+                <a href="/site/telas/resultunico.html" class="lll">Ir para o Site</a>
+            </button>
+        </form>
+    </body>
 </html>

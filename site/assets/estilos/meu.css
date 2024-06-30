@@ -1,0 +1,120 @@
+#sugesttitle {
+    background-color: white;
+    margin-bottom: 0;
+    border-radius: 5%;
+    text-align: center;
+  }
+  
+  #sugestbox {
+    margin: 1% 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 3%;
+  }
+  
+  .card-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px; /* Ajuste a distância entre os cards conforme necessário */
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .card:hover {
+    background-color: lightgray;
+    transform: scale(0.95);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .linksugest {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  .linksugest:hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  
+  .problem-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  .problem-item a:hover {
+    color: #4CAF50;
+  }
+  
+  .section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    color: green;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  
+  p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  #Good {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .LinkBeter {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .LinkBeter:hover {
+    color: #388E3C;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Adiciona a transição suave */
+  }
+  
+  .card img:hover {
+    transform: scale(1.4); /* Aumenta a imagem */
+  }
+  

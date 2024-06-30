@@ -1,0 +1,52 @@
+{
+    "boa": {
+        "title": "Se você é uma dessas pessoas sortudas que conseguem viver confortavelmente e ainda têm uma boa parte da renda sobrando no final do mês, parabéns! É hora de maximizar seu potencial financeiro. Aqui estão algumas dicas:",
+        "tip1": {
+            "subtitle": "Investimentos Inteligentes:",
+            "content": "Com uma renda mais elevada, você tem a oportunidade de explorar uma ampla gama de investimentos. Considere diversificar seu portfólio em diferentes classes de ativos, como ações, títulos e imóveis. A diversificação pode ajudar a maximizar retornos e reduzir riscos."
+        },
+        "tip2": {
+            "subtitle": "Fundo de Emergência:",
+            "content": "Apesar de viver abaixo dos seus meios, imprevistos podem acontecer. É fundamental ter um fundo de emergência robusto. Recomenda-se ter o equivalente a pelo menos seis meses de despesas em uma conta de fácil acesso, como uma poupança ou conta corrente remunerada."
+        },
+        "tip3": {
+            "subtitle": "Planejamento Tributário:",
+            "content": "Com uma renda mais alta, você pode se beneficiar de estratégias inteligentes de planejamento tributário. Explore opções como deduções fiscais, investimentos com benefícios fiscais e planos de previdência privada. Planejar adequadamente seus impostos pode resultar em economias significativas a longo prazo."
+        }
+    },
+    "normal": {
+        "title": "Se você está confortável com sua renda, mas deseja aproveitar ao máximo suas finanças, aqui estão algumas dicas para otimizar seus recursos:",
+        "tip1": {
+            "subtitle": "Orçamento Inteligente:",
+            "content": "Mesmo com uma renda considerada normal, é essencial ter um orçamento bem planejado. Acompanhe seus gastos e identifique áreas onde você pode economizar. Reduzir despesas desnecessárias pode liberar recursos para investimentos ou para construir um fundo de emergência."
+        },
+        "tip2": {
+            "subtitle": "Investimentos Estratégicos:",
+            "content": "Embora possa não ter a mesma amplitude de opções que pessoas com renda mais alta, ainda é possível fazer investimentos inteligentes. Considere opções acessíveis, como fundos de investimento de baixo custo ou plataformas de investimento online. Busque por oportunidades que ofereçam um equilíbrio entre retorno e risco."
+        },
+        "tip3": {
+            "subtitle": "Educação Financeira:",
+            "content": "Investir em sua própria educação financeira pode ser uma das melhores decisões que você pode tomar. Procure por recursos gratuitos ou de baixo custo, como livros, cursos online ou workshops locais, para aprimorar seu conhecimento sobre finanças pessoais e investimentos."
+        }
+    },
+    "ruim": {
+        "title": "Mesmo enfrentando desafios financeiros, é crucial ter um plano orçamentário sólido. Acompanhe atentamente seus gastos e identifique áreas onde cortes podem ser feitos. Priorize despesas essenciais, como moradia, alimentação e saúde, e busque maneiras de reduzir custos nessas áreas sem comprometer sua qualidade de vida.",
+        "tip1": {
+            "subtitle": "Economia Criativa:",
+            "content": "Quando os recursos são limitados, a criatividade pode ser sua aliada. Explore opções como comprar itens usados, fazer trocas com amigos ou familiares e buscar por descontos e promoções. Além disso, considere formas de aumentar sua renda, como trabalhos freelancer ou oportunidades de meio período."
+        },
+        "tip2": {
+            "subtitle": "Planejamento de Longo Prazo:",
+            "content": "Mesmo com recursos limitados, é importante pensar no futuro. Estabeleça metas financeiras realistas e desenvolva um plano para alcançá-las gradualmente. Isso pode envolver economizar uma pequena quantia regularmente, mesmo que pareça insignificante no momento, e procurar por oportunidades de crescimento financeiro a longo prazo."
+        },
+        "tip3": {
+            "subtitle": "Educação Financeira Acessível:",
+            "content": "Aprender sobre finanças pessoais não precisa ser caro. Procure por recursos gratuitos ou de baixo custo, como workshops comunitários, materiais educativos online e programas governamentais de educação financeira. Invista tempo e esforço em melhorar sua compreensão sobre gestão financeira, para tomar decisões mais informadas e eficazes no futuro."
+        },
+        "tip4": {
+            "subtitle": "Resiliência e Persistência:",
+            "content": "Enfrentar dificuldades financeiras pode ser desafiador, mas é importante manter uma atitude positiva e persistente. Esteja aberto a aprender com seus erros, ajustar sua abordagem conforme necessário e buscar apoio em sua rede de apoio pessoal e comunitário. Com determinação e esforço, é possível superar obstáculos financeiros e alcançar maior estabilidade econômica."
+        }
+
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cartão de Crédito</title>
+    <link rel="stylesheet" href="/site/assets/estilos/meu.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="/site/assets/script/meu.js"></script>
+</head>
+
+<body id="Bad">
+  <div class="content">
+    <h1 id="title"></h1>
+    <div id="tips"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/site/assets/db/dbmatheus.json') // Certifique-se de fornecer o caminho correto para o arquivo JSON
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erro na rede');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.ruim) {
+            const situation = data.ruim;
+            document.getElementById('title').innerText = situation.title;
+
+            const tipsContainer = document.getElementById('tips');
+            for (let key in situation) {
+              if (key.startsWith('tip')) {
+                const tip = situation[key];
+                const tipElement = document.createElement('div');
+
+                const subtitle = document.createElement('h3');
+                subtitle.classList.add('section-title');
+                subtitle.innerText = tip.subtitle;
+
+                const content = document.createElement('p');
+                content.innerText = tip.content;
+
+                tipElement.appendChild(subtitle);
+                tipElement.appendChild(content);
+
+                tipsContainer.appendChild(tipElement);
+              }
+            }
+          } else {
+            console.error('Dados da categoria "ruim" não encontrados');
+            document.getElementById('title').innerText = 'Erro: Dados não encontrados';
+          }
+        })
+        .catch(error => {
+          console.error('Erro ao carregar o JSON:', error);
+          document.getElementById('title').innerText = 'Erro ao carregar os dados';
+        });
+    });
+  </script>
+</body>
+
+</html>
