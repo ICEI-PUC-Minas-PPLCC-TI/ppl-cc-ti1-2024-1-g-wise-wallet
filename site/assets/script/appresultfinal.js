@@ -20,7 +20,7 @@ async function carregarDados() {
   const user = data.usuarios.find(user => user.id === userId);
 
   if(user){
-    for(i = 0; i < 3; i++){
+    for(i = 0; i < 6; i++){
       const mesData = user.dados.find(d => d[`mes${i + 1}`])?.[`mes${i + 1}`];
       if(mesData){
         mesData.forEach(categoria =>{
@@ -71,7 +71,10 @@ function criarGraficoPizza(elementId, labels, data) {
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
+          'rgb(255, 205, 86)',
+          'rgb(75, 192, 192)',
+          'rgb(153, 102, 255)',
+          'rgb(255, 159, 64)'
         ],
         hoverOffset: 4
       }]
@@ -83,7 +86,9 @@ function criarGraficoLinha(elementId, titulo, dadosMeses) {
   const ctx = document.getElementById(elementId);
 
   const categorias = Array.from(new Set(dadosMeses.flat().map(item => item.categoria)));
-  const cores = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'];
+  const cores = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)',
+          'rgb(153, 102, 255)',
+          'rgb(255, 159, 64)'];
   const datasets = categorias.map((categoria, index) => {
     return {
       label: categoria,
@@ -99,7 +104,7 @@ function criarGraficoLinha(elementId, titulo, dadosMeses) {
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['Mês 1', 'Mês 2', 'Mês 3'],
+      labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6'],
       datasets: datasets
     },
     options: {
