@@ -1,47 +1,62 @@
 //RECEBENDO OS DADOS DO JSON SERVER
 let gastosTotais = {};
-let gastosMes1 = [];
-let gastosMes2 = [];
-let gastosMes3 = [];
+let gastosmeses = [];
+
+// Função para buscar o ID do usuário logado
+
+function getUserIdFromToken(token){
+  const payLoadBase64 = token.split('.')[1];
+  const decodedpayLoad = atob(payLoadBase64);
+  const payLoad = JSON.parse(decodedpayLoad);
+  return payLoad.id;
+}
 
 async function carregarDados() {
-  const response = await fetch("/site/assets/db/dbmayer.json");
+  const token = localStorage.getItem('authToken');
+  const userId = getUserIdFromToken(token);
+
+  const response = await fetch("/site/assets/db/db.json");
   const data = await response.json();
+  const user = data.usuarios.find(user => user.id === userId);
 
-  // Inicializar objetos de soma para cada categoria
-  data.dados[0].mes1.forEach(categoria => {
-    if (!gastosTotais[categoria.categoria]) {
-      gastosTotais[categoria.categoria] = 0;
+  if(user){
+    for(i = 0; i < 3; i++){
+      const mesData = user.dados.find(d => d[`mes${i + 1}`])?.[`mes${i + 1}`];
+      if(mesData){
+        mesData.forEach(categoria =>{
+          if(!gastosTotais[categoria.categoria]){
+            gastosTotais[categoria.categoria] = 0;
+          }
+          gastosTotais[categoria.categoria] += parseFloat(categoria.valor);
+        });
+        gastosmeses.push(mesData.map(categoria => ({
+          categoria: categoria.categoria,
+          valor: parseFloat(categoria.valor)
+        })));
+      }
+      else{
+        console.warn(`Dados do mês ${i + 1} não encontrados para o usuário`)
+      }
     }
-    gastosTotais[categoria.categoria] += parseFloat(categoria.valor);
-    gastosMes1.push({ categoria: categoria.categoria, valor: parseFloat(categoria.valor) });
-  });
 
-  data.dados[1].mes2.forEach(categoria => {
-    if (!gastosTotais[categoria.categoria]) {
-      gastosTotais[categoria.categoria] = 0;
+    if(gastosmeses.length >= 3){
+      //Preparar dados para o gráfico de pizza
+      const labels = Object.keys(gastosTotais);
+      const dataValores = Object.values(gastosTotais);
+
+      //Configurar gráfico de pizza
+      criarGraficoPizza('pie-chart1', labels, dataValores);
+
+      //Configurar gráfico de linha
+      criarGraficoLinha('line-chart1', 'R$', gastosmeses);
     }
-    gastosTotais[categoria.categoria] += parseFloat(categoria.valor);
-    gastosMes2.push({ categoria: categoria.categoria, valor: parseFloat(categoria.valor) });
-  });
-
-  data.dados[2].mes3.forEach(categoria => {
-    if (!gastosTotais[categoria.categoria]) {
-      gastosTotais[categoria.categoria] = 0;
+    else{
+      alert('Não há dados suficientes para gerar o gráfico');
     }
-    gastosTotais[categoria.categoria] += parseFloat(categoria.valor);
-    gastosMes3.push({ categoria: categoria.categoria, valor: parseFloat(categoria.valor) });
-  });
-
-  // Preparar dados para os gráficos de pizza
-  const labels = Object.keys(gastosTotais);
-  const dataValores = Object.values(gastosTotais);
-
-  // Configurar gráficos de pizza
-  criarGraficoPizza('pie-chart1', labels, dataValores);
-
-  // Configurar gráficos de linha
-  criarGraficoLinha('line-chart1', 'R$', [gastosMes1, gastosMes2, gastosMes3]);
+  } 
+  else{
+    alert('Usuário não encontrado');
+  }
 }
 
 function criarGraficoPizza(elementId, labels, data) {
