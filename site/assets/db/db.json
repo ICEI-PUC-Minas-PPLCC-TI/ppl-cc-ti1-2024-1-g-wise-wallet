@@ -11,59 +11,10 @@
     {
       "id": 1719601330954,
       "login": "buzzijulio",
-      "senha": "senhajulio",
+      "senha": "juliosenha",
       "nome": "Julio Thurow Buzzi",
       "email": "juliocesar.thurowbuzzi@gmail.com",
-      "dados": [
-        {
-          "mes1": [
-            {
-              "categoria": "Gas",
-              "valor": 120
-            },
-            {
-              "categoria": "Energia",
-              "valor": 150
-            },
-            {
-              "categoria": "Escola",
-              "valor": 900
-            }
-          ]
-        },
-        {
-          "mes2": [
-            {
-              "categoria": "Energia ",
-              "valor": 160
-            },
-            {
-              "categoria": "Gas",
-              "valor": 70
-            },
-            {
-              "categoria": "Escola",
-              "valor": 800
-            }
-          ]
-        },
-        {
-          "mes3": [
-            {
-              "categoria": "Gas",
-              "valor": 80
-            },
-            {
-              "categoria": "Energia",
-              "valor": 150
-            },
-            {
-              "categoria": "Escola",
-              "valor": 1900
-            }
-          ]
-        }
-      ]
+      "dados": []
     },
     {
       "id": 1719601886093,
@@ -143,80 +94,7 @@
       "senha": "adriano31",
       "nome": "Adriano Beltrão Clary",
       "email": "adrianoclary@gmail.com",
-      "dados": [
-        {
-          "mes1": [
-            {
-              "categoria": "Agua",
-              "valor": 120
-            },
-            {
-              "categoria": "Luz",
-              "valor": 85
-            },
-            {
-              "categoria": "Gasolina",
-              "valor": 300
-            },
-            {
-              "categoria": "Aluguel",
-              "valor": 2000
-            },
-            {
-              "categoria": "Escola",
-              "valor": 970
-            }
-          ]
-        },
-        {
-          "mes2": [
-            {
-              "categoria": "Agua",
-              "valor": 150
-            },
-            {
-              "categoria": "Luz",
-              "valor": 130
-            },
-            {
-              "categoria": "Gasolina",
-              "valor": 200
-            },
-            {
-              "categoria": "Escola",
-              "valor": 970
-            },
-            {
-              "categoria": "Aluguel",
-              "valor": 2000
-            }
-          ]
-        },
-        {
-          "mes3": [
-            {
-              "categoria": "Agua",
-              "valor": 190
-            },
-            {
-              "categoria": "Luz",
-              "valor": 75
-            },
-            {
-              "categoria": "Gasolina",
-              "valor": 600
-            },
-            {
-              "categoria": "Aluguel",
-              "valor": 2000
-            },
-            {
-              "categoria": "Escola ",
-              "valor": 970
-            }
-          ]
-        }
-      ]
+      "dados": []
     },
     {
       "id": 1719799824591,
@@ -224,56 +102,7 @@
       "senha": "danielle24",
       "nome": "Danielle Mayer",
       "email": "danimayer@ig.com.br",
-      "dados": [
-        {
-          "mes1": [
-            {
-              "categoria": "Tenis",
-              "valor": 750
-            },
-            {
-              "categoria": "Maquiagem",
-              "valor": 250
-            },
-            {
-              "categoria": "Roupas",
-              "valor": 300
-            }
-          ]
-        },
-        {
-          "mes2": [
-            {
-              "categoria": "Tenis",
-              "valor": 750
-            },
-            {
-              "categoria": "Maquiagem",
-              "valor": 300
-            },
-            {
-              "categoria": "Roupa",
-              "valor": 250
-            }
-          ]
-        },
-        {
-          "mes3": [
-            {
-              "categoria": "Tenis",
-              "valor": 750
-            },
-            {
-              "categoria": "Maquiagem",
-              "valor": 400
-            },
-            {
-              "categoria": "Roupa",
-              "valor": 1000
-            }
-          ]
-        }
-      ]
+      "dados": []
     }
   ],
   "mensagens": [
@@ -354,12 +183,6 @@
       "nome": "Gustavo",
       "mensagem": "Vamos manter o respeito nas interações.",
       "data": "2024-06-06"
-    },
-    {
-      "id": 15,
-      "nome": "Ana",
-      "mensagem": "Que legal encontrar um fórum tão ativo!",
-      "data": "2024-06-05"
     }
   ]
 }

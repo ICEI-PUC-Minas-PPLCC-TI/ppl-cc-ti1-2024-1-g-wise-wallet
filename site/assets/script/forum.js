@@ -1,94 +1,65 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const dataInput = document.getElementById("data");
-    const hoje = new Date().toISOString().split('T')[0];
-    dataInput.value = hoje;
+// forum.js
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('forumForm');
+    const dataField = document.getElementById('data');
 
-    const form = document.getElementById("forumForm");
-    form.addEventListener("submit", function(event) {
+    // Preenche a data atual no campo de data
+    const now = new Date();
+    const formattedDate = now.toISOString().split('T')[0];
+    dataField.value = formattedDate;
+
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const nome = document.getElementById("nome").value;
-        const mensagem = document.getElementById("mensagem").value;
-        const data = document.getElementById("data").value;
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
 
-        if (!nome || !mensagem || !data) {
-            alert("Por favor, preencha todos os campos.");
-            return;
-        }
-
-        const novaMensagem = {
+        const messageData = {
             nome: nome,
             mensagem: mensagem,
-            data: data,
-            id: Date.now() // Gera um ID único baseado no timestamp
+            data: formattedDate
         };
 
-        fetch('http://localhost:3000/mensagens', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(novaMensagem)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert("Mensagem enviada com sucesso!");
-            document.getElementById("forumForm").reset();
-            document.getElementById("data").value = hoje;
-            // Atualizar a lista de mensagens após adicionar uma nova mensagem (opcional)
-            // chamar função para atualizar mensagens
-        })
-        .catch((error) => {
-            console.error('Erro ao enviar mensagem:', error);
-        });
+        try {
+            const response = await fetch('http://localhost:3000/mensagens', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(messageData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao enviar a mensagem.');
+            }
+
+            alert('Mensagem enviada com sucesso!');
+            form.reset();
+        } catch (error) {
+            console.error('Erro ao enviar a mensagem:', error.message);
+        }
     });
 
-    // Função para carregar mensagem para edição
-    function carregarMensagemParaEdicao(messageId) {
-        fetch(`http://localhost:3000/mensagens/${messageId}`)
-            .then(response => response.json())
-            .then(data => {
-                // Preencher os campos de edição com os dados da mensagem
-                document.getElementById('nome').value = data.nome;
-                document.getElementById('mensagem').value = data.mensagem;
-                document.getElementById('data').value = data.data; // Pode não ser editável, dependendo da interface
-
-                // Alterar o evento de submit do formulário para editar a mensagem
-                form.removeEventListener('submit', handleSubmit);
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-
-                    const mensagemEditada = {
-                        nome: document.getElementById('nome').value,
-                        mensagem: document.getElementById('mensagem').value,
-                        data: document.getElementById('data').value
-                    };
-
-                    fetch(`http://localhost:3000/mensagens/${messageId}`, {
-                        method: 'PUT',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(mensagemEditada)
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert('Mensagem editada com sucesso!');
-                        document.getElementById('forumForm').reset();
-                        document.getElementById('data').value = hoje;
-                        // Atualizar a lista de mensagens após editar a mensagem (opcional)
-                        // chamar função para atualizar mensagens
-                    })
-                    .catch(error => console.error('Erro ao editar mensagem:', error));
-                });
-            })
-            .catch(error => console.error('Erro ao carregar mensagem para edição:', error));
-    }
-
-    // Exemplo de como chamar a função de edição ao clicar em um botão de editar na interface
-    const botaoEditar = document.getElementById('botaoEditar');
-    botaoEditar.addEventListener('click', function() {
-        const messageIdParaEditar = 1; // Substitua pelo ID da mensagem que deseja editar
-        carregarMensagemParaEdicao(messageIdParaEditar);
-    });
+    loadMessages();
 });
+
+async function loadMessages() {
+    try {
+        const response = await fetch('http://localhost:3000/mensagens');
+        const messages = await response.json();
+        const messagesDiv = document.getElementById('mensagens');
+        messagesDiv.innerHTML = '';
+
+        messages.forEach(message => {
+            const messageDiv = document.createElement('div');
+            messageDiv.innerHTML = `
+                <p><strong>Nome:</strong> ${message.nome}</p>
+                <p><strong>Mensagem:</strong> ${message.mensagem}</p>
+                <p><strong>Data:</strong> ${message.data}</p>
+            `;
+            messagesDiv.appendChild(messageDiv);
+        });
+    } catch (error) {
+        console.error('Erro ao carregar mensagens:', error.message);
+    }
+}

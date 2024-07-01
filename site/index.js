@@ -85,122 +85,6 @@ app.post('/login', (req, res) => {
     });
 });
 
-// Rota para obter todas as mensagens
-app.get('/mensagens', (req, res) => {
-    const dbPath = './assets/db/db.json';
-
-    fs.readFile(dbPath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
-            res.status(500).send('Erro ao ler o arquivo.');
-            return;
-        }
-        const db = JSON.parse(data);
-        res.json(db.mensagens);
-    });
-});
-
-// Rota para adicionar uma nova mensagem
-app.post('/mensagens', verificarAutenticacao, (req, res) => {
-    const novaMensagem = req.body;
-
-    const dbPath = './assets/db/db.json';
-
-    fs.readFile(dbPath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
-            res.status(500).send('Erro ao ler o arquivo.');
-            return;
-        }
-        const db = JSON.parse(data);
-
-        novaMensagem.id = Date.now(); // Gerando um ID simples para a nova mensagem
-        db.mensagens.push(novaMensagem);
-
-        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
-            if (err) {
-                console.error('Erro ao escrever no arquivo:', err);
-                res.status(500).json({ success: false, message: 'Erro ao escrever no arquivo.' });
-                return;
-            }
-
-            res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso.' });
-        });
-    });
-});
-
-// Rota para editar uma mensagem
-app.put('/mensagens/:id', verificarAutenticacao, (req, res) => {
-    const messageId = parseInt(req.params.id);
-    const updatedMessage = req.body;
-
-    const dbPath = './assets/db/db.json';
-
-    fs.readFile(dbPath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
-            res.status(500).send('Erro ao ler o arquivo.');
-            return;
-        }
-        
-        const db = JSON.parse(data);
-
-        // Encontrar a mensagem pelo ID
-        const messageToUpdate = db.mensagens.find(msg => msg.id === messageId);
-        if (!messageToUpdate) {
-            res.status(404).send('Mensagem não encontrada.');
-            return;
-        }
-
-        // Atualizar os campos da mensagem encontrada
-        Object.assign(messageToUpdate, updatedMessage);
-
-        // Escrever de volta no arquivo db.json
-        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
-            if (err) {
-                console.error('Erro ao escrever no arquivo:', err);
-                res.status(500).send('Erro ao escrever no arquivo.');
-                return;
-            }
-
-            res.status(200).json({ success: true, message: 'Mensagem editada com sucesso.' });
-        });
-    });
-});
-
-// Rota para excluir uma mensagem
-app.delete('/mensagens/:id', verificarAutenticacao, (req, res) => {
-    const messageId = parseInt(req.params.id);
-
-    const dbPath = './assets/db/db.json';
-
-    fs.readFile(dbPath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
-            res.status(500).send('Erro ao ler o arquivo.');
-            return;
-        }
-        const db = JSON.parse(data);
-
-        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
-        if (messageIndex === -1) {
-            res.status(404).send('Mensagem não encontrada.');
-            return;
-        }
-
-        db.mensagens.splice(messageIndex, 1);
-
-        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
-            if (err) {
-                console.error('Erro ao escrever no arquivo:', err);
-                res.status(500).send('Erro ao escrever no arquivo.');
-                return;
-            }
-
-            res.status(200).json({ success: true, message: 'Mensagem excluída com sucesso!'});
-        });
-    });
-});
 
 // Trocar a senha
 app.post('/alterar_senha', (req, res) => {
@@ -319,7 +203,130 @@ app.get('/dadosUsuario', verificarAutenticacao, (req, res) => {
     });
 })
 
-// Iniciar o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+// index.js - Continuação
+// ...
+const dbPath = './assets/db/db.json';
+
+// Rota para obter todas as mensagens
+app.get('/mensagens', (req, res) => {
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        res.status(200).json(db.mensagens);
+    });
 });
+
+// Rota para obter uma mensagem específica
+app.get('/mensagens/:id', (req, res) => {
+    const messageId = parseInt(req.params.id, 10);
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        const message = db.mensagens.find(msg => msg.id === messageId);
+        if (!message) {
+            res.status(404).send('Mensagem não encontrada.');
+            return;
+        }
+        res.status(200).json(message);
+    });
+});
+
+// Rota para criar uma nova mensagem
+app.post('/mensagens', (req, res) => {
+    const novaMensagem = req.body;
+    novaMensagem.id = Date.now(); // Gerando um ID simples para a nova mensagem
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        db.mensagens.push(novaMensagem);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+            res.status(201).json(novaMensagem);
+        });
+    });
+});
+
+// Rota para atualizar uma mensagem
+app.put('/mensagens/:id', (req, res) => {
+    const messageId = parseInt(req.params.id, 10);
+    const mensagemAtualizada = req.body;
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
+        if (messageIndex === -1) {
+            res.status(404).send('Mensagem não encontrada.');
+            return;
+        }
+        db.mensagens[messageIndex] = { id: messageId, ...mensagemAtualizada };
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+            res.status(200).json(db.mensagens[messageIndex]);
+        });
+    });
+});
+
+// Rota para excluir uma mensagem
+app.delete('/mensagens/:id', (req, res) => {
+    const messageId = parseInt(req.params.id, 10);
+
+    fs.readFile(dbPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Erro ao ler o arquivo:', err);
+            res.status(500).send('Erro ao ler o arquivo.');
+            return;
+        }
+        const db = JSON.parse(data);
+        const messageIndex = db.mensagens.findIndex(msg => msg.id === messageId);
+        if (messageIndex === -1) {
+            res.status(404).send('Mensagem não encontrada.');
+            return;
+        }
+        db.mensagens.splice(messageIndex, 1);
+
+        fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error('Erro ao escrever no arquivo:', err);
+                res.status(500).send('Erro ao escrever no arquivo.');
+                return;
+            }
+            res.status(204).send();
+        });
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
+
+
+
+
