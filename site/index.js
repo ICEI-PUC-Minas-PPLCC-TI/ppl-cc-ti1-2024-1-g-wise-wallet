@@ -202,8 +202,8 @@ app.delete('/mensagens/:id', verificarAutenticacao, (req, res) => {
     });
 });
 
-// Rota para trocar a senha
-app.post('/alterar_senha', verificarAutenticacao, (req, res) => {
+// Trocar a senha
+app.post('/alterar_senha', (req, res) => {
     const { currentPassword, newPassword } = req.body;
 
     const dbPath = './assets/db/db.json';
@@ -236,6 +236,7 @@ app.post('/alterar_senha', verificarAutenticacao, (req, res) => {
         });
     });
 });
+
 
 // Função para verificar se o usuário está autenticado
 function verificarAutenticacao(req, res, next) {
@@ -275,7 +276,6 @@ app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
             return;
         }
         const mesIndex = user.dados.length + 1;
-        console.log(mesIndex)
         user.dados.push({[`mes${mesIndex}`]: mes});
 
         fs.writeFile(dbPath, JSON.stringify(db, null, 2), 'utf8', (err) => {
@@ -285,10 +285,16 @@ app.post('/finalizarRegistro', verificarAutenticacao, (req, res) => {
                 return;
             }
 
-            res.status(200).json({success: true, message: 'Registro finalizado com sucesso.', registroContagem: mesIndex});
+            // Verifica se o mêsIndex é 3, 6 ou 9 para redirecionar para resultfinal.html
+            if (mesIndex % 3 === 0) {
+                res.status(200).json({success: true, message: 'Registro finalizado com sucesso.', registroContagem: mesIndex, redirectToResultFinal: true});
+            } else {
+                res.status(200).json({success: true, message: 'Registro finalizado com sucesso.', registroContagem: mesIndex});
+            }
         })
     });
 })
+
 
 // Rota para obter dados do usuário logado
 app.get('/dadosUsuario', verificarAutenticacao, (req, res) => {

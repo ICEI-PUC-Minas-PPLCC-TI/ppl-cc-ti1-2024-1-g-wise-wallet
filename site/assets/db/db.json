@@ -14,7 +14,56 @@
       "senha": "senhajulio",
       "nome": "Julio Thurow Buzzi",
       "email": "juliocesar.thurowbuzzi@gmail.com",
-      "dados": []
+      "dados": [
+        {
+          "mes1": [
+            {
+              "categoria": "Gas",
+              "valor": 120
+            },
+            {
+              "categoria": "Energia",
+              "valor": 150
+            },
+            {
+              "categoria": "Escola",
+              "valor": 900
+            }
+          ]
+        },
+        {
+          "mes2": [
+            {
+              "categoria": "Energia ",
+              "valor": 160
+            },
+            {
+              "categoria": "Gas",
+              "valor": 70
+            },
+            {
+              "categoria": "Escola",
+              "valor": 800
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Gas",
+              "valor": 80
+            },
+            {
+              "categoria": "Energia",
+              "valor": 150
+            },
+            {
+              "categoria": "Escola",
+              "valor": 1900
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 1719601886093,
@@ -27,7 +76,7 @@
     {
       "id": 1719602354344,
       "login": "bezin031",
-      "senha": "123",
+      "senha": "juliao",
       "nome": "Bernardo Alves",
       "email": "bernardoalves222@gmail.com",
       "dados": []
