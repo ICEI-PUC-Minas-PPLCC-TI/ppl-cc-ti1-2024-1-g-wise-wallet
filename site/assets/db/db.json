@@ -87,6 +87,144 @@
       "nome": "Teste Dados",
       "email": "datatest@gmail.com",
       "dados": []
+    },
+    {
+      "id": 1719799325456,
+      "login": "adrianoclary",
+      "senha": "adriano31",
+      "nome": "Adriano Beltrão Clary",
+      "email": "adrianoclary@gmail.com",
+      "dados": [
+        {
+          "mes1": [
+            {
+              "categoria": "Agua",
+              "valor": 120
+            },
+            {
+              "categoria": "Luz",
+              "valor": 85
+            },
+            {
+              "categoria": "Gasolina",
+              "valor": 300
+            },
+            {
+              "categoria": "Aluguel",
+              "valor": 2000
+            },
+            {
+              "categoria": "Escola",
+              "valor": 970
+            }
+          ]
+        },
+        {
+          "mes2": [
+            {
+              "categoria": "Agua",
+              "valor": 150
+            },
+            {
+              "categoria": "Luz",
+              "valor": 130
+            },
+            {
+              "categoria": "Gasolina",
+              "valor": 200
+            },
+            {
+              "categoria": "Escola",
+              "valor": 970
+            },
+            {
+              "categoria": "Aluguel",
+              "valor": 2000
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Agua",
+              "valor": 190
+            },
+            {
+              "categoria": "Luz",
+              "valor": 75
+            },
+            {
+              "categoria": "Gasolina",
+              "valor": 600
+            },
+            {
+              "categoria": "Aluguel",
+              "valor": 2000
+            },
+            {
+              "categoria": "Escola ",
+              "valor": 970
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1719799824591,
+      "login": "danimayer",
+      "senha": "danielle24",
+      "nome": "Danielle Mayer",
+      "email": "danimayer@ig.com.br",
+      "dados": [
+        {
+          "mes1": [
+            {
+              "categoria": "Tenis",
+              "valor": 750
+            },
+            {
+              "categoria": "Maquiagem",
+              "valor": 250
+            },
+            {
+              "categoria": "Roupas",
+              "valor": 300
+            }
+          ]
+        },
+        {
+          "mes2": [
+            {
+              "categoria": "Tenis",
+              "valor": 750
+            },
+            {
+              "categoria": "Maquiagem",
+              "valor": 300
+            },
+            {
+              "categoria": "Roupa",
+              "valor": 250
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Tenis",
+              "valor": 750
+            },
+            {
+              "categoria": "Maquiagem",
+              "valor": 400
+            },
+            {
+              "categoria": "Roupa",
+              "valor": 1000
+            }
+          ]
+        }
+      ]
     }
   ],
   "mensagens": [
