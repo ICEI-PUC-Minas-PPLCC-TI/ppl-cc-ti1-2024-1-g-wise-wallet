@@ -111,6 +111,14 @@
       "nome": "Felipe Moraes",
       "email": "felipe@gmail.com",
       "dados": []
+    },
+    {
+      "id": 1719924209059,
+      "login": "gabiDias",
+      "senha": "gabi123",
+      "nome": "Gabriel Dias",
+      "email": "gabrield@gmail.com",
+      "dados": []
     }
   ],
   "mensagens": [
