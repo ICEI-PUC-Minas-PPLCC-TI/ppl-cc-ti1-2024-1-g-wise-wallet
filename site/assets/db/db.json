@@ -73,14 +73,6 @@
       "dados": []
     },
     {
-      "id": 1719758752596,
-      "login": "caralhogames",
-      "senha": "caralhinho",
-      "nome": "Matheus Carvalho",
-      "email": "caralhao@outlook.com",
-      "dados": []
-    },
-    {
       "id": 1719760132340,
       "login": "datatest",
       "senha": "datas05",
@@ -119,6 +111,63 @@
       "nome": "Gabriel Dias",
       "email": "gabrield@gmail.com",
       "dados": []
+    },
+    {
+      "id": 1719931791066,
+      "login": "RommelC",
+      "senha": "romel123",
+      "nome": "Rommel Carneiro",
+      "email": "romel@gmail.com",
+      "dados": [
+        {
+          "mes1": [
+            {
+              "categoria": "Gas",
+              "valor": 120
+            },
+            {
+              "categoria": "Energia",
+              "valor": 200
+            },
+            {
+              "categoria": "Agua",
+              "valor": 200
+            }
+          ]
+        },
+        {
+          "mes2": [
+            {
+              "categoria": "Gas",
+              "valor": 100
+            },
+            {
+              "categoria": "Energia",
+              "valor": 100
+            },
+            {
+              "categoria": "Agua",
+              "valor": 150
+            }
+          ]
+        },
+        {
+          "mes3": [
+            {
+              "categoria": "Agua",
+              "valor": 10
+            },
+            {
+              "categoria": "Energia",
+              "valor": 150
+            },
+            {
+              "categoria": "Gas",
+              "valor": 200
+            }
+          ]
+        }
+      ]
     }
   ],
   "mensagens": [
